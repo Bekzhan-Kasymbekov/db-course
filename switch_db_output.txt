@@ -1,0 +1,5 @@
+You are connected to database "postgres" as user "postgres" on host "localhost" (address "127.0.0.1") at port "5432".
+SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, compression: off)
+You are now connected to database "university" as user "postgres".
+You are connected to database "university" as user "postgres" on host "localhost" (address "127.0.0.1") at port "5432".
+SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, compression: off)

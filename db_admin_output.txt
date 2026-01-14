@@ -1,4 +1,5 @@
-CREATE DATABASE
+psql:db_admin.sql:1: ERROR:  database "university" already exists
 DROP DATABASE
 psql:db_admin.sql:5: NOTICE:  database "employees" does not exist, skipping
 DROP DATABASE
+CREATE DATABASE
