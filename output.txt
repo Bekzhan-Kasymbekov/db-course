@@ -1,0 +1,6 @@
+ id |     name      | age |           email           
+----+---------------+-----+---------------------------
+  1 | Alice Johnson |  21 | alice.johnson@example.com
+  2 | Bob Smith     |  23 | bob.smith@example.com
+(2 rows)
+
