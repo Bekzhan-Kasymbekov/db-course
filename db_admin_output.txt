@@ -1,0 +1,4 @@
+CREATE DATABASE
+DROP DATABASE
+psql:db_admin.sql:5: NOTICE:  database "employees" does not exist, skipping
+DROP DATABASE
