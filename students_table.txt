@@ -1,0 +1,10 @@
+ student_id | first_name | last_name  |              email              |              thesis_topic               | enrolment_year | grade 
+------------+------------+------------+---------------------------------+-----------------------------------------+----------------+-------
+          1 | Ainura     | Sadykova   | ainura.sadykova@school.edu      | Machine Learning in Healthcare          | 2021-09-01     |    92
+          2 | Bekbolot   | Toktogulov | bekbolot.toktogulov@school.edu  | Distributed Systems Optimization        | 2020-09-01     |    88
+          3 | Alina      | Ivanova    | alina.ivanova@school.edu        | Natural Language Processing             | 2022-09-01     |    95
+          4 | Timur      | Aitmatov   | timur.aitmatov@school.edu       | Computer Vision for Autonomous Vehicles | 2019-09-01     |    90
+          5 | Diana      | Kadyrova   | diana.kadyrova@school.edu       |                                         | 2023-09-01     |    85
+          6 | Nursultan  | Bektemirov | nursultan.bektemirov@school.edu | Cybersecurity Risk Analysis             | 2021-09-01     |    89
+(6 rows)
+

@@ -1,0 +1,2 @@
+psql:drop_table.sql:1: NOTICE:  table "non_existent_table" does not exist, skipping
+DROP TABLE

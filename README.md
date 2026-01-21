@@ -56,6 +56,30 @@ In this lab, I worked with database-level operations:
 - `switch_db.sql` - database switching demonstration
 - `switch_db_output.txt` - execution output
 
+---
+
+## Lab #6: Tables, Data Types and Constraints
+
+In this lab, I worked with table manipulation:
+
+- Created and dropped tables via SQL scripts
+- Used different data types and implemented constraints
+- Altered existing table columns via `ADD`, `RENAME`, and `DROP COLUMN`
+- Created temprorary tables using `CREATE TEMP TABLE` command
+
+### Relevant files 
+- `create_students_variables.sql` - creating a table with various data types, constraints
+- `create_students_output.txt` - output
+- `populate_students.sql` - populating the table with data
+- `populate_students_output.txt` - output
+- `alter_table_output.txt` - changing the table using alter commands
+- `drop_table.sql` - dropping a table if it exists
+- `drop_table_output.txt` - output
+- `students_table.txt` - the table's content before ALTER
+- `students_table_after_alter.txt` - the table's content after ALTER
+- `temp_table.sql` - creating a temporary table
+- `temp_table_output.txt` - output
+
 ## How to Run the Scripts
 
 Example commands used to execute the scripts:
