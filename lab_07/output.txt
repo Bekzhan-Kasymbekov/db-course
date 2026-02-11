@@ -1,0 +1,55 @@
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 4
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+ student_id | name | email 
+------------+------+-------
+(0 rows)
+
+ student_id | name | email 
+------------+------+-------
+(0 rows)
+
+ student_id | name | email 
+------------+------+-------
+(0 rows)
+
+ student_id | course_id |  semester   | enrollment_date | grade 
+------------+-----------+-------------+-----------------+-------
+          1 |       101 | 2024-Spring | 2026-02-11      | A 
+          1 |       102 | 2024-Spring | 2026-02-11      | B+
+          2 |       101 | 2024-Spring | 2026-02-11      | A-
+          1 |       101 | 2024-Fall   | 2026-02-11      | A+
+(4 rows)
+
+ product_id | product_name | price 
+------------+--------------+-------
+(0 rows)
+
+ transaction_id | amount | transaction_date 
+----------------+--------+------------------
+(0 rows)
+
+ order_id | customer_name | order_date 
+----------+---------------+------------
+(0 rows)
+
+ customer_id | customer_name |      email      
+-------------+---------------+-----------------
+        1000 | VIP Customer  | vip@example.com
+(1 row)
+
