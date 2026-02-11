@@ -80,6 +80,24 @@ In this lab, I worked with table manipulation:
 - `temp_table.sql` - creating a temporary table
 - `temp_table_output.txt` - output
 
+## Lab #7: Primary Keys
+
+- Created primary keys via Column-level Constraint, Table-level Constraint, Named Constraint 
+- Created tables with primary and composite primary keys
+- Created tables with auto generated primary keys using `SERIAL`,`BIGSERIAL` and `GENERATED AS IDENTITY`
+
+### Relevant files
+- `00_clean.sql` - a script to delete all previously created tables for clean lab workflow
+- `01_column_level_pk.sql` - create primary keys using Column-level Constraint
+- `02_table_level_pk.sql` - create primary keys using Table-level Constraint
+- `03_named_constraint_pk.sql` - create primary keys using Named Contraint
+- `04_composite_pk.sql` - create tables with composite primary key
+- `05_serial_bigserial.sql` - create tables using `SERIAL` and `BIGSERIAL` for automatic primary key generation 
+- `06_identity.sql` - create tables using `AS IDENTITY` primary key generation
+- `run_all.sql` - master script to run everything
+- `output.txt` - output of scripts and created tables
+
+
 ## How to Run the Scripts
 
 Example commands used to execute the scripts:
@@ -89,3 +107,4 @@ psql -h localhost -U postgres -d postgres -f
 psql -h localhost -U postgres -d school -f
 psql -h localhost -U postgres -d school -f	
 psql -h localhost -U postgres -d school -f
+psql -h localhost -U postgres -d lab_07 -f
