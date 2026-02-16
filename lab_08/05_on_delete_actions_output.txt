@@ -1,0 +1,87 @@
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+DELETE 1
+    ?column?    
+----------------
+ CASCADE RESULT
+(1 row)
+
+ emp_id | dept_id 
+--------+---------
+(0 rows)
+
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+psql:05_on_delete_actions.sql:55: ERROR:  update or delete on table "departments_restrict" violates foreign key constraint "employees_restrict_dept_id_fkey" on table "employees_restrict"
+DETAIL:  Key (dept_id)=(1) is still referenced from table "employees_restrict".
+    ?column?     
+-----------------
+ RESTRICT RESULT
+(1 row)
+
+ emp_id | dept_id 
+--------+---------
+      1 |       1
+(1 row)
+
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+psql:05_on_delete_actions.sql:76: ERROR:  update or delete on table "departments_no_action" violates foreign key constraint "employees_no_action_dept_id_fkey" on table "employees_no_action"
+DETAIL:  Key (dept_id)=(1) is still referenced from table "employees_no_action".
+     ?column?     
+------------------
+ NO ACTION RESULT
+(1 row)
+
+ emp_id | dept_id 
+--------+---------
+      1 |       1
+(1 row)
+
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+DELETE 1
+    ?column?     
+-----------------
+ SET NULL RESULT
+(1 row)
+
+ emp_id | dept_id 
+--------+---------
+      1 |        
+(1 row)
+
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+CREATE TABLE
+INSERT 0 1
+DELETE 1
+      ?column?      
+--------------------
+ SET DEFAULT RESULT
+(1 row)
+
+ emp_id | dept_id 
+--------+---------
+      1 |     999
+(1 row)
+

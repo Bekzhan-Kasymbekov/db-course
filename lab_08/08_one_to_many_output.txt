@@ -1,0 +1,66 @@
+DROP TABLE
+psql:08_one_to_many.sql:4: NOTICE:  drop cascades to 4 other objects
+DETAIL:  drop cascades to constraint employees_inline_dept_id_fkey on table employees_inline
+drop cascades to constraint employees_table_fk_dept_id_fkey on table employees_table_fk
+drop cascades to constraint fk_project_department on table projects_existing
+drop cascades to constraint fk_employee_department on table employees_named
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 2
+INSERT 0 4
+         ?column?          
+---------------------------
+ ONE-TO-MANY INITIAL STATE
+(1 row)
+
+ dept_id |  dept_name  
+---------+-------------
+       1 | Engineering
+       2 | Design
+(2 rows)
+
+ emp_id | emp_name | dept_id 
+--------+----------+---------
+      1 | Bob      |       1
+      2 | Brian    |       1
+      3 | Alicia   |       2
+      4 | Jordan   |       2
+(4 rows)
+
+              ?column?              
+------------------------------------
+ DEPARTMENT → EMPLOYEE RELATIONSHIP
+(1 row)
+
+  dept_name  | emp_name 
+-------------+----------
+ Design      | Alicia
+ Design      | Jordan
+ Engineering | Bob
+ Engineering | Brian
+(4 rows)
+
+BEGIN
+psql:08_one_to_many.sql:51: ERROR:  update or delete on table "departments" violates foreign key constraint "employees_dept_id_fkey" on table "employees"
+DETAIL:  Key (dept_id)=(1) is still referenced from table "employees".
+ROLLBACK
+             ?column?             
+----------------------------------
+ ONE-TO-MANY AFTER DELETE ATTEMPT
+(1 row)
+
+ dept_id |  dept_name  
+---------+-------------
+       1 | Engineering
+       2 | Design
+(2 rows)
+
+ emp_id | emp_name | dept_id 
+--------+----------+---------
+      1 | Bob      |       1
+      2 | Brian    |       1
+      3 | Alicia   |       2
+      4 | Jordan   |       2
+(4 rows)
+

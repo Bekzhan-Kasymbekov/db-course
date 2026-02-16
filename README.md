@@ -1,30 +1,37 @@
 # Database Labs (PostgreSQL)
 
-This repository contains my work for the database laboratory assignments.
-All tasks were completed using **PostgreSQL** and executed through the terminal using `psql`.
-SQL command are stored in `.sql` scripts to ensure reproducibility and version control.
+This repository contains my work for the Database laboratory assignments.  
+All tasks were completed using **PostgreSQL** and executed via the terminal using `psql`.
+
+All SQL commands are stored in `.sql` scripts to ensure:
+
+- Reproducibility  
+- Clear workflow  
+- Version control tracking  
+- Structured lab organization  
 
 ---
 
-## Lab #3: Database and Table Basics
+# Lab #3: Database and Table Basics
 
 In this lab, I:
 
 - Created a PostgreSQL database `school`
 - Created a basic table `students`
-- Populated the table with sample data
-- Executed queries using SQL scripts with the `.sql` extension
+- Inserted sample records
+- Executed queries using `.sql` scripts
 - Ran all scripts through the terminal using `psql`
 
-### Relevant files
-- `schema.sql` - table creation
-- `seed.sql` - inserting sample data
-- `queries.sql` - basic queries
-- `output.txt` - execution output as proof
+## Relevant files
+
+- `schema.sql` — table creation
+- `seed.sql` — inserting sample data
+- `queries.sql` — basic SELECT queries
+- `output.txt` — execution output as proof
 
 ---
 
-## Lab #4: Data Selection and Filtering 
+# Lab #4: Data Selection and Filtering
 
 In this lab, I practiced querying data using:
 
@@ -35,76 +42,154 @@ In this lab, I practiced querying data using:
 
 All queries were executed on the `students` table.
 
-### Relevant files
+## Relevant files
 
-- `queries.sql` - queries using filtering, ordering and limiting
-- `output.txt` - saved query results
+- `queries.sql` — filtering, ordering, and limiting queries
+- `output.txt` — saved query results
 
 ---
 
-## Lab #5: Database Administration and Switching
+# Lab #5: Database Administration and Switching
 
 In this lab, I worked with database-level operations:
 
-- Created and dropped databases using an SQL script
+- Created and dropped databases using SQL scripts
 - Executed administrative commands from the terminal
-- Created a script demonstrating switching between databases using `\c`
+- Demonstrated switching between databases using `\c`
 
-### Relevant files
-- `db_admin.sql` - CREATE and DROP DATABASE commands
-- `db_admin_ouput.sql` - execution output
-- `switch_db.sql` - database switching demonstration
-- `switch_db_output.txt` - execution output
+## Relevant files
+
+- `db_admin.sql` — `CREATE DATABASE` and `DROP DATABASE`
+- `db_admin_output.txt` — execution output
+- `switch_db.sql` — database switching demonstration
+- `switch_db_output.txt` — execution output
 
 ---
 
-## Lab #6: Tables, Data Types and Constraints
+# Lab #6: Tables, Data Types, and Constraints
 
-In this lab, I worked with table manipulation:
+In this lab, I worked with table structure and modification:
 
-- Created and dropped tables via SQL scripts
-- Used different data types and implemented constraints
-- Altered existing table columns via `ADD`, `RENAME`, and `DROP COLUMN`
-- Created temprorary tables using `CREATE TEMP TABLE` command
+- Created and dropped tables using SQL scripts
+- Used different data types
+- Implemented constraints (`NOT NULL`, `UNIQUE`, `CHECK`, etc.)
+- Modified existing tables using `ALTER TABLE`
+- Created temporary tables using `CREATE TEMP TABLE`
 
-### Relevant files 
-- `create_students_variables.sql` - creating a table with various data types, constraints
-- `create_students_output.txt` - output
-- `populate_students.sql` - populating the table with data
-- `populate_students_output.txt` - output
-- `alter_table_output.txt` - changing the table using alter commands
-- `drop_table.sql` - dropping a table if it exists
-- `drop_table_output.txt` - output
-- `students_table.txt` - the table's content before ALTER
-- `students_table_after_alter.txt` - the table's content after ALTER
-- `temp_table.sql` - creating a temporary table
-- `temp_table_output.txt` - output
+## Relevant files
 
-## Lab #7: Primary Keys
+- `create_students_variables.sql`
+- `create_students_output.txt`
+- `populate_students.sql`
+- `populate_students_output.txt`
+- `alter_table.sql`
+- `alter_table_output.txt`
+- `drop_table.sql`
+- `drop_table_output.txt`
+- `students_table.txt`
+- `students_table_after_alter.txt`
+- `temp_table.sql`
+- `temp_table_output.txt`
 
-- Created primary keys via Column-level Constraint, Table-level Constraint, Named Constraint 
-- Created tables with primary and composite primary keys
-- Created tables with auto generated primary keys using `SERIAL`,`BIGSERIAL` and `GENERATED AS IDENTITY`
+---
 
-### Relevant files
-- `00_clean.sql` - a script to delete all previously created tables for clean lab workflow
-- `01_column_level_pk.sql` - create primary keys using Column-level Constraint
-- `02_table_level_pk.sql` - create primary keys using Table-level Constraint
-- `03_named_constraint_pk.sql` - create primary keys using Named Contraint
-- `04_composite_pk.sql` - create tables with composite primary key
-- `05_serial_bigserial.sql` - create tables using `SERIAL` and `BIGSERIAL` for automatic primary key generation 
-- `06_identity.sql` - create tables using `AS IDENTITY` primary key generation
-- `run_all.sql` - master script to run everything
-- `output.txt` - output of scripts and created tables
+# Lab #7: Primary Keys
 
+In this lab, I worked with different types of primary keys:
 
-## How to Run the Scripts
+- Column-level primary key constraints
+- Table-level primary key constraints
+- Named primary key constraints
+- Composite primary keys
+- Auto-generated primary keys using:
+  - `SERIAL`
+  - `BIGSERIAL`
+  - `GENERATED AS IDENTITY`
 
-Example commands used to execute the scripts:
+## Relevant files
+
+- `00_clean.sql`
+- `01_column_level_pk.sql`
+- `02_table_level_pk.sql`
+- `03_named_constraint_pk.sql`
+- `04_composite_pk.sql`
+- `05_serial_bigserial.sql`
+- `06_identity.sql`
+- `run_all.sql`
+- `output.txt`
+
+---
+
+# Lab #8: Foreign Keys and Relationships
+
+In this lab, I explored foreign key constraints and relational modeling.
+
+Topics covered:
+
+- Inline foreign key definitions
+- Table-level foreign keys
+- Named foreign key constraints
+- Adding foreign keys via `ALTER TABLE`
+- `ON DELETE` actions:
+  - CASCADE
+  - RESTRICT
+  - NO ACTION
+  - SET NULL
+  - SET DEFAULT
+- `ON UPDATE` actions
+- One-to-One relationships
+- One-to-Many relationships
+- Many-to-Many relationships (junction table with composite primary key)
+
+## Relevant files
+
+- `01_inline_fk.sql`
+- `02_table_lvl_fk.sql`
+- `03_existing_table_fk.sql`
+- `04_named_fk.sql`
+- `05_on_delete_actions.sql`
+- `06_on_update_actions.sql`
+- `07_one_to_one.sql`
+- `08_one_to_many.sql`
+- `09_many_to_many.sql`
+
+Each script includes reproducible `DROP TABLE IF EXISTS` statements and produces an associated `_output.txt` file.
+
+---
+
+# How to Run the Scripts
+
+Example command format:
 
 ```bash
-psql -h localhost -U postgres -d postgres -f
-psql -h localhost -U postgres -d school -f
-psql -h localhost -U postgres -d school -f	
-psql -h localhost -U postgres -d school -f
-psql -h localhost -U postgres -d lab_07 -f
+psql -h localhost -U postgres -d <database_name> -f script.sql
+```
+
+Example:
+
+```bash
+psql -h localhost -U postgres -d lab_08 -f 05_on_delete_actions.sql
+```
+
+To capture output:
+
+```bash
+psql -h localhost -U postgres -d lab_08 -f script.sql > output.txt 2>&1
+```
+
+To run all scripts automatically:
+
+```bash
+for file in *.sql; do
+    psql -h localhost -U postgres -d lab_08 -f "$file" > "${file%.sql}_output.txt" 2>&1
+done
+```
+
+---
+
+# Environment
+
+- PostgreSQL
+- Ubuntu Linux
+- Terminal-based workflow
+- Version control via Git

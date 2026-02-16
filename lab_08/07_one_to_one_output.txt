@@ -1,0 +1,26 @@
+DROP TABLE
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 2
+INSERT 0 1
+BEGIN
+psql:07_one_to_one.sql:27: ERROR:  duplicate key value violates unique constraint "passports_pkey"
+DETAIL:  Key (user_id)=(1) already exists.
+ROLLBACK
+  ?column?  
+------------
+ ONE-TO-ONE
+(1 row)
+
+ user_id |  username  
+---------+------------
+       1 | bekkas
+       2 | bekzhankas
+(2 rows)
+
+ user_id | passport_number 
+---------+-----------------
+       1 | AB1234567890
+(1 row)
+

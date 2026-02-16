@@ -1,0 +1,6 @@
+psql:04_named_fk.sql:2: NOTICE:  table "employees_named" does not exist, skipping
+DROP TABLE
+psql:04_named_fk.sql:3: NOTICE:  table "departments_named" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
