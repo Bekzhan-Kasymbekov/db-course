@@ -1,0 +1,16 @@
+UPDATE 1
+UPDATE 1
+ dept_id | dept_name | location 
+---------+-----------+----------
+       1 | IT        | Bishkek
+       3 | Finance   | Naryn
+       2 | HR        | Karakol
+(3 rows)
+
+ emp_id | first_name | last_name  | dept_id 
+--------+------------+------------+---------
+      1 | Bekzhan    | Kasymbekov |       1
+      3 | Meerim     | Bekova     |       3
+      2 | Aibek      | Smith      |       2
+(3 rows)
+

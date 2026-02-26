@@ -1,0 +1,14 @@
+DELETE 1
+DELETE 1
+ dept_id | dept_name | location 
+---------+-----------+----------
+       1 | IT        | Bishkek
+       2 | HR        | Karakol
+(2 rows)
+
+ emp_id | first_name | last_name  | dept_id 
+--------+------------+------------+---------
+      1 | Bekzhan    | Kasymbekov |       1
+      2 | Aibek      | Smith      |       2
+(2 rows)
+

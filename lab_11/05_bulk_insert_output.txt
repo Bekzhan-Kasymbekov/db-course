@@ -1,0 +1,10 @@
+INSERT 0 3
+ emp_id | first_name | last_name  | dept_id 
+--------+------------+------------+---------
+      1 | Bekzhan    | Kasymbekov |       1
+      2 | Aibek      | Smith      |       2
+      4 | Tilek      | Alkanov    |       1
+      5 | Nursultan  | Isakov     |       1
+      6 | Gulzat     | Sultanova  |       2
+(5 rows)
+

@@ -199,12 +199,83 @@ All tables were properly normalized and verified to satisfy 3NF.
 
 ---
 
+# Lab #11: Basic Data Operations and Bulk Import
+
+In this lab, I implemented and automated fundamental data manipulation operations in PostgreSQL using a relational schema.
+
+Topics covered:
+
+- Creating relational tables with foreign key constraints
+- Demonstrating `INSERT` (single-row and multi-row)
+- Demonstrating `UPDATE` with `WHERE` clause
+- Demonstrating `DELETE` with `WHERE` clause
+- Bulk operations:
+  - Multi-row `INSERT`
+  - Conditional bulk `UPDATE`
+  - Conditional bulk `DELETE`
+- Data reset using `TRUNCATE`
+- `TRUNCATE ... CASCADE` for foreign key dependencies
+- Bulk data import using `\copy` from CSV
+- Referential integrity enforcement
+- Automated execution via Bash scripting
+- Output and error logging
+
+The schema includes:
+
+- `departments` (parent table)
+- `employees` (child table with `FOREIGN KEY` referencing departments)
+- `ON DELETE CASCADE` behavior
+
+The lab demonstrates the full data lifecycle:
+
+1. Schema creation
+2. Data insertion
+3. Data modification
+4. Data deletion
+5. Bulk operations
+6. Table reset
+7. CSV-based data ingestion
+
+All operations are reproducible and idempotent due to:
+
+- `DROP TABLE IF EXISTS`
+- Controlled execution order
+- Automated script execution
+
+## Relevant files
+
+- `01_schema.sql` — schema creation with foreign key constraint
+- `02_insert.sql` — single and multi-row insert operations
+- `03_update.sql` — update operations with `WHERE`
+- `04_delete.sql` — delete operations with referential integrity
+- `05_bulk_insert.sql` — multi-row insert
+- `06_bulk_update.sql` — conditional bulk update
+- `07_bulk_delete.sql` — conditional bulk delete
+- `08_copy.sql` — CSV import using `\copy`
+- `employees.csv` — sample data for bulk import
+- `run_all.sh` — Bash automation script
+- `*_output.txt` — per-script execution logs (stdout + stderr)
+
+## Automation
+
+All scripts are executed via:
+
+```bash
+./run_all.sh
+
+---
+
 # How to Run the Scripts
 
 Example command format:
 
 ```bash
 psql -h localhost -U postgres -d <database_name> -f script.sql
+```
+
+For automated scripts:
+```bash
+/.run_all.sh
 ```
 
 Example:

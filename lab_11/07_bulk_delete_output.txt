@@ -1,0 +1,7 @@
+DELETE 3
+ emp_id | first_name | last_name  | dept_id 
+--------+------------+------------+---------
+      1 | Bekzhan    | Kasymbekov |       1
+      6 | Gulzat     | Sultanova  |       2
+(2 rows)
+

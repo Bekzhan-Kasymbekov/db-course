@@ -1,0 +1,18 @@
+INSERT 0 1
+INSERT 0 2
+INSERT 0 1
+INSERT 0 2
+ dept_id | dept_name | location 
+---------+-----------+----------
+       1 | IT        | Bishkek
+       2 | HR        | Osh
+       3 | Finance   | Naryn
+(3 rows)
+
+ emp_id | first_name | last_name  | dept_id 
+--------+------------+------------+---------
+      1 | Bekzhan    | Kasymbekov |       1
+      2 | Aibek      | Sadykov    |       2
+      3 | Meerim     | Bekova     |       3
+(3 rows)
+

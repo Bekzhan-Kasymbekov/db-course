@@ -1,0 +1,12 @@
+psql:08_copy.sql:6: NOTICE:  truncate cascades to table "employees"
+TRUNCATE TABLE
+INSERT 0 3
+COPY 4
+ emp_id | first_name |   last_name   | dept_id 
+--------+------------+---------------+---------
+      1 | Nursultan  | Isakov        |       1
+      2 | Meerim     | Bekova        |       2
+      3 | Tilek      | Usubaliev     |       1
+      4 | Ainura     | Toktomamatova |       3
+(4 rows)
+
