@@ -157,6 +157,48 @@ Each script includes reproducible `DROP TABLE IF EXISTS` statements and produces
 
 ---
 
+# Lab #9: Database Design and Normalization (3NF)
+
+In this lab, I designed and implemented a complete relational database system for a **Gym & Fitness Tracking System**.
+
+Topics covered:
+
+- Requirements analysis
+- Conceptual design (entities and relationships)
+- Logical design
+- Implementation in PostgreSQL
+- Application of normalization rules up to **Third Normal Form (3NF)**
+- One-to-Many relationships
+- Many-to-Many relationships with junction tables
+- Composite primary keys
+- Foreign key constraints with `ON DELETE CASCADE`
+- Data validation using `CHECK`, `NOT NULL`, and `UNIQUE`
+- Seeding realistic test data
+- Automated execution via terminal scripts
+
+The system includes:
+
+- Members
+- Membership plans
+- Trainers
+- Workout programs
+- Exercises
+- Payments
+- Sessions
+- Logs
+- Junction tables for M:N relationships
+
+All tables were properly normalized and verified to satisfy 3NF.
+
+## Relevant files
+
+- `schema.sql` — full database schema
+- `seed.sql` — initial data population
+- `queries.sql` — verification queries
+- `output.txt` — full execution output (schema + seed + queries)
+
+---
+
 # How to Run the Scripts
 
 Example command format:
