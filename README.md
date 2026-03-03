@@ -344,7 +344,7 @@ psql -h localhost -U postgres -d <database_name> -f script.sql
 
 For automated scripts:
 ```bash
-/.run_all.sh
+./run_all.sh
 ```
 
 Example:
