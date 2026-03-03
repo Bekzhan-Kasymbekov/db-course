@@ -411,15 +411,15 @@ In this lab, I implemented various types of SQL joins to understand how relation
 
 ## Topics Covered
 
-- INNER JOIN
-- LEFT JOIN
-- RIGHT JOIN
-- FULL OUTER JOIN
-- CROSS JOIN
+- `INNER JOIN`
+- `LEFT JOIN`
+- `RIGHT JOIN`
+- `FULL OUTER JOIN`
+- `CROSS JOIN`
 - Multi-table joins
 - Self join
 - Many-to-many relationships via junction table
-- NULL handling in outer joins
+- `NULL` handling in outer joins
 
 ---
 
