@@ -334,6 +334,79 @@ Execution is automated using:
 ./run_all.sh
 ```
 
+---
+
+# Lab #13: Aggregate Functions in PostgreSQL
+
+In this lab, I implemented and tested PostgreSQL aggregate functions using a structured and reproducible workflow.
+
+The goal of this lab was to understand how aggregate functions summarize data, how grouping works internally, and how filtering aggregated results differs from filtering individual rows.
+
+---
+
+## Topics Covered
+
+- `COUNT()` — counting rows and handling NULL values
+- `SUM()` — total calculations
+- `AVG()` — arithmetic mean
+- `MIN()` and `MAX()` — extreme values
+- `GROUP BY` — grouping rows for aggregation
+- `HAVING` — filtering grouped results
+- `STRING_AGG()` — string concatenation across rows
+- `ARRAY_AGG()` — collecting grouped values into arrays
+- Statistical aggregates:
+  - `STDDEV()`
+  - `VARIANCE()`
+- Conditional aggregation using `CASE`
+- Percentage calculations using subqueries
+- Proper NULL handling in aggregates
+
+---
+
+## Database Schema
+
+The lab uses a simplified `employees` table containing:
+
+- Employee identity information
+- Department classification
+- Salary values
+- Age
+- Hire date
+- Bonus (including NULL values for testing)
+
+The schema was intentionally designed to support:
+
+- Department-level aggregation
+- Statistical calculations
+- NULL-based analysis
+- Conditional grouping scenarios
+
+---
+
+## Relevant Files
+
+- `01_schema.sql` — table creation
+- `02_seed.sql` — test data insertion
+- `03_aggregates.sql` — all aggregate queries
+- `run_all.sh` — automation script
+- `output.txt` — full execution log (stdout + stderr)
+
+---
+
+## Automation Workflow
+
+All scripts are executed in the following order:
+
+1. `01_schema.sql`
+2. `02_seed.sql`
+3. `03_aggregates.sql`
+
+Execution is automated using:
+
+```bash
+./run_all.sh
+```
+
 # How to Run the Scripts
 ```
 Example command format:

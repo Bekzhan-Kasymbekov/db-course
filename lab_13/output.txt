@@ -1,0 +1,72 @@
+ total_employees 
+-----------------
+               7
+(1 row)
+
+ total_salary 
+--------------
+    452000.00
+(1 row)
+
+   average_salary   
+--------------------
+ 64571.428571428571
+(1 row)
+
+ min_salary | max_salary 
+------------+------------
+   50000.00 |   80000.00
+(1 row)
+
+ department | employee_count | total_salary |     avg_salary     
+------------+----------------+--------------+--------------------
+ IT         |              3 |    225000.00 | 75000.000000000000
+ Sales      |              2 |    125000.00 | 62500.000000000000
+ HR         |              2 |    102000.00 | 51000.000000000000
+(3 rows)
+
+ department | employee_count 
+------------+----------------
+ IT         |              3
+(1 row)
+
+ department |     employees      
+------------+--------------------
+ Sales      | Michael, Sarah
+ IT         | John, Alice, David
+ HR         | Bob, Emma
+(3 rows)
+
+ department |         salary_list          
+------------+------------------------------
+ Sales      | {60000.00,65000.00}
+ IT         | {70000.00,80000.00,75000.00}
+ HR         | {50000.00,52000.00}
+(3 rows)
+
+ department |  salary_std_dev   |    salary_variance    
+------------+-------------------+-----------------------
+ Sales      | 3535.533905932738 | 12500000.000000000000
+ IT         | 5000.000000000000 | 25000000.000000000000
+ HR         | 1414.213562373095 |  2000000.000000000000
+(3 rows)
+
+ department | total_employees | high_earners 
+------------+-----------------+--------------
+ Sales      |               2 |            1
+ IT         |               3 |            3
+ HR         |               2 |            0
+(3 rows)
+
+ department | dept_count |     percentage     
+------------+------------+--------------------
+ IT         |          3 | 42.857142857142854
+ Sales      |          2 |  28.57142857142857
+ HR         |          2 |  28.57142857142857
+(3 rows)
+
+ total_rows | employee_with_bonus | employees_without_bonus 
+------------+---------------------+-------------------------
+          7 |                   5 |                       2
+(1 row)
+
