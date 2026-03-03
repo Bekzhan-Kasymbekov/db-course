@@ -262,11 +262,80 @@ All scripts are executed via:
 
 ```bash
 ./run_all.sh
+```
+---
+
+# Lab #12: Advanced Queries and Analytical SQL
+
+In this lab, I implemented advanced SQL querying techniques on a full relational schema for an online course platform.
+
+Topics covered:
+
+- `JOIN` queries (multi-table joins)
+- Aggregation with `GROUP BY`
+- Filtering aggregated results using `HAVING`
+- Pattern matching with `LIKE` and `ILIKE`
+- Subqueries (scalar and correlated)
+- `EXISTS` and `NOT EXISTS`
+- `CASE` expressions for classification
+- Common Table Expressions (`WITH`)
+- Multi-level aggregation
+- Analytical comparisons (student average vs course average)
+- Revenue calculations per instructor
+- Proper relational navigation:
+  - payments → courses → instructor
+  - submissions → assignments → courses
+
+The database schema includes:
+
+- Users (admin, instructor, student)
+- Categories
+- Courses
+- Enrollments (M:N relationship)
+- Lessons
+- Assignments
+- Submissions
+- Payments
+- Reviews
+
+All queries are written in structured `.sql` files and executed via an automated Bash script.
 
 ---
 
-# How to Run the Scripts
+## Relevant files
 
+- `schema.sql` — full relational schema
+- `seed.sql` — realistic test data
+- `01_basic_queries.sql`
+- `02_like_ilike_queries.sql`
+- `03_aggregation_group_by_queries.sql`
+- `04_having_queries.sql`
+- `05_join_queries.sql`
+- `06_subqueries.sql`
+- `07_exists_not_exists.sql`
+- `08_case_queries.sql`
+- `09_cte_queries.sql`
+- `run_all.sh` — automation script
+- `*_output.txt` — per-script execution logs (stdout + stderr)
+
+---
+
+## Automation Workflow
+
+All scripts are executed in the following order:
+
+1. `schema.sql`
+2. `seed.sql`
+3. All numbered query files (`01_...` → `09_...`)
+
+Execution is automated using:
+
+```bash
+./run_all.sh
+```
+
+# How to Run the Scripts
+```
 Example command format:
 
 ```bash
