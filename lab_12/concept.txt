@@ -1,0 +1,31 @@
+This is an online learning platform design.
+
+Entities:
+- Instructors
+- Students
+- Courses
+- Enrollments
+- Lessons
+- Assignments
+- Submissions
+- Payments
+- Reviews
+
+Relationships:
+- One instructor - many courses
+
+- One course - many lessons
+- One course - many enrollments
+- One course - many assignments
+- One course - many reviews
+- One course - one category
+- One course - many payments
+
+- One student - many enrollments
+- One student - many submissions
+- One student - many payments
+- One student - many reviews
+
+- One assignment - many submissions
+
+- One category - many courses
