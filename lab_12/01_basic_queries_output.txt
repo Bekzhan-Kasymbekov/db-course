@@ -1,0 +1,134 @@
+ user_id | first_name | last_name  
+---------+------------+------------
+      13 | Student3   | Lastname3
+      16 | Student6   | Lastname6
+      29 | Student19  | Lastname19
+      41 | Student31  | Lastname31
+      44 | Student34  | Lastname34
+(5 rows)
+
+ user_id | first_name  | last_name 
+---------+-------------+-----------
+       3 | Instructor1 | Teach1
+       4 | Instructor2 | Teach2
+       5 | Instructor3 | Teach3
+       6 | Instructor4 | Teach4
+       7 | Instructor5 | Teach5
+       8 | Instructor6 | Teach6
+       9 | Instructor7 | Teach7
+      10 | Instructor8 | Teach8
+(8 rows)
+
+ course_id | course_title 
+-----------+--------------
+         4 | Course 4
+         5 | Course 5
+         6 | Course 6
+         7 | Course 7
+         8 | Course 8
+         9 | Course 9
+        11 | Course 11
+        12 | Course 12
+        13 | Course 13
+        15 | Course 15
+        16 | Course 16
+        17 | Course 17
+        18 | Course 18
+(13 rows)
+
+ course_id | course_title 
+-----------+--------------
+         9 | Course 9
+        10 | Course 10
+        13 | Course 13
+        14 | Course 14
+        16 | Course 16
+(5 rows)
+
+ user_id | first_name | last_name 
+---------+------------+-----------
+(0 rows)
+
+ first_name | last_name  | course_title |      enrollment_date       | duration_days 
+------------+------------+--------------+----------------------------+---------------
+ Student33  | Lastname33 | Course 1     | 2026-03-03 23:55:29.606779 |           100
+ Student19  | Lastname19 | Course 1     | 2026-03-03 23:55:29.606779 |           122
+ Student12  | Lastname12 | Course 1     | 2026-03-03 23:55:29.606779 |            88
+ Student2   | Lastname2  | Course 1     | 2026-03-03 23:55:29.606779 |            47
+ Student30  | Lastname30 | Course 2     | 2026-03-03 23:55:29.606779 |           138
+ Student18  | Lastname18 | Course 2     | 2026-03-03 23:55:29.606779 |            30
+ Student13  | Lastname13 | Course 2     | 2026-03-03 23:55:29.606779 |            40
+ Student1   | Lastname1  | Course 2     | 2026-03-03 23:55:29.606779 |            97
+ Student34  | Lastname34 | Course 3     | 2026-03-03 23:55:29.606779 |            82
+ Student30  | Lastname30 | Course 3     | 2026-03-03 23:55:29.606779 |            86
+ Student11  | Lastname11 | Course 3     | 2026-03-03 23:55:29.606779 |           109
+ Student10  | Lastname10 | Course 3     | 2026-03-03 23:55:29.606779 |           108
+ Student2   | Lastname2  | Course 3     | 2026-03-03 23:55:29.606779 |            58
+ Student30  | Lastname30 | Course 4     | 2026-03-03 23:55:29.606779 |            89
+ Student21  | Lastname21 | Course 4     | 2026-03-03 23:55:29.606779 |            94
+ Student20  | Lastname20 | Course 4     | 2026-03-03 23:55:29.606779 |           126
+ Student9   | Lastname9  | Course 4     | 2026-03-03 23:55:29.606779 |           100
+ Student31  | Lastname31 | Course 5     | 2026-03-03 23:55:29.606779 |            49
+ Student27  | Lastname27 | Course 5     | 2026-03-03 23:55:29.606779 |           127
+ Student24  | Lastname24 | Course 5     | 2026-03-03 23:55:29.606779 |            73
+ Student11  | Lastname11 | Course 5     | 2026-03-03 23:55:29.606779 |           132
+ Student9   | Lastname9  | Course 5     | 2026-03-03 23:55:29.606779 |            64
+ Student7   | Lastname7  | Course 5     | 2026-03-03 23:55:29.606779 |           112
+ Student30  | Lastname30 | Course 6     | 2026-03-03 23:55:29.606779 |           132
+ Student21  | Lastname21 | Course 6     | 2026-03-03 23:55:29.606779 |            63
+ Student17  | Lastname17 | Course 6     | 2026-03-03 23:55:29.606779 |            58
+ Student16  | Lastname16 | Course 6     | 2026-03-03 23:55:29.606779 |            82
+ Student10  | Lastname10 | Course 6     | 2026-03-03 23:55:29.606779 |            79
+ Student5   | Lastname5  | Course 6     | 2026-03-03 23:55:29.606779 |            91
+ Student31  | Lastname31 | Course 7     | 2026-03-03 23:55:29.606779 |            84
+ Student16  | Lastname16 | Course 7     | 2026-03-03 23:55:29.606779 |           105
+ Student8   | Lastname8  | Course 7     | 2026-03-03 23:55:29.606779 |           121
+ Student7   | Lastname7  | Course 7     | 2026-03-03 23:55:29.606779 |           148
+ Student4   | Lastname4  | Course 7     | 2026-03-03 23:55:29.606779 |           139
+ Student25  | Lastname25 | Course 8     | 2026-03-03 23:55:29.606779 |            83
+ Student24  | Lastname24 | Course 8     | 2026-03-03 23:55:29.606779 |            82
+ Student23  | Lastname23 | Course 8     | 2026-03-03 23:55:29.606779 |           124
+ Student11  | Lastname11 | Course 8     | 2026-03-03 23:55:29.606779 |            97
+ Student5   | Lastname5  | Course 8     | 2026-03-03 23:55:29.606779 |            34
+ Student1   | Lastname1  | Course 8     | 2026-03-03 23:55:29.606779 |           138
+ Student29  | Lastname29 | Course 9     | 2026-03-03 23:55:29.606779 |           124
+ Student8   | Lastname8  | Course 9     | 2026-03-03 23:55:29.606779 |           121
+ Student34  | Lastname34 | Course 10    | 2026-03-03 23:55:29.606779 |           133
+ Student32  | Lastname32 | Course 10    | 2026-03-03 23:55:29.606779 |            88
+ Student30  | Lastname30 | Course 10    | 2026-03-03 23:55:29.606779 |            35
+ Student15  | Lastname15 | Course 10    | 2026-03-03 23:55:29.606779 |            84
+ Student14  | Lastname14 | Course 10    | 2026-03-03 23:55:29.606779 |           118
+ Student5   | Lastname5  | Course 10    | 2026-03-03 23:55:29.606779 |           145
+ Student2   | Lastname2  | Course 10    | 2026-03-03 23:55:29.606779 |           112
+ Student1   | Lastname1  | Course 10    | 2026-03-03 23:55:29.606779 |            89
+ Student21  | Lastname21 | Course 11    | 2026-03-03 23:55:29.606779 |            99
+ Student18  | Lastname18 | Course 11    | 2026-03-03 23:55:29.606779 |            66
+ Student32  | Lastname32 | Course 12    | 2026-03-03 23:55:29.606779 |           118
+ Student21  | Lastname21 | Course 12    | 2026-03-03 23:55:29.606779 |            45
+ Student20  | Lastname20 | Course 12    | 2026-03-03 23:55:29.606779 |            41
+ Student16  | Lastname16 | Course 12    | 2026-03-03 23:55:29.606779 |            78
+ Student13  | Lastname13 | Course 12    | 2026-03-03 23:55:29.606779 |           125
+ Student9   | Lastname9  | Course 12    | 2026-03-03 23:55:29.606779 |            68
+ Student32  | Lastname32 | Course 13    | 2026-03-03 23:55:29.606779 |           129
+ Student20  | Lastname20 | Course 13    | 2026-03-03 23:55:29.606779 |           139
+ Student3   | Lastname3  | Course 13    | 2026-03-03 23:55:29.606779 |           101
+ Student34  | Lastname34 | Course 14    | 2026-03-03 23:55:29.606779 |           122
+ Student20  | Lastname20 | Course 14    | 2026-03-03 23:55:29.606779 |            94
+ Student14  | Lastname14 | Course 15    | 2026-03-03 23:55:29.606779 |           146
+ Student11  | Lastname11 | Course 15    | 2026-03-03 23:55:29.606779 |            40
+ Student10  | Lastname10 | Course 15    | 2026-03-03 23:55:29.606779 |            33
+ Student8   | Lastname8  | Course 15    | 2026-03-03 23:55:29.606779 |            63
+ Student1   | Lastname1  | Course 15    | 2026-03-03 23:55:29.606779 |           108
+ Student31  | Lastname31 | Course 16    | 2026-03-03 23:55:29.606779 |           110
+ Student30  | Lastname30 | Course 16    | 2026-03-03 23:55:29.606779 |            58
+ Student29  | Lastname29 | Course 16    | 2026-03-03 23:55:29.606779 |            52
+ Student21  | Lastname21 | Course 16    | 2026-03-03 23:55:29.606779 |            65
+ Student7   | Lastname7  | Course 16    | 2026-03-03 23:55:29.606779 |            54
+ Student14  | Lastname14 | Course 17    | 2026-03-03 23:55:29.606779 |            63
+ Student11  | Lastname11 | Course 17    | 2026-03-03 23:55:29.606779 |            47
+ Student7   | Lastname7  | Course 17    | 2026-03-03 23:55:29.606779 |            59
+ Student30  | Lastname30 | Course 18    | 2026-03-03 23:55:29.606779 |            55
+ Student17  | Lastname17 | Course 18    | 2026-03-03 23:55:29.606779 |            59
+ Student7   | Lastname7  | Course 18    | 2026-03-03 23:55:29.606779 |            59
+(79 rows)
+

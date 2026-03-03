@@ -1,0 +1,28 @@
+ course_id | course_title | price  | price_category 
+-----------+--------------+--------+----------------
+         1 | Course 1     |  37.61 | Cheap
+         2 | Course 2     |  63.69 | Standard
+         3 | Course 3     |  20.39 | Cheap
+         4 | Course 4     | 194.31 | Premium
+         5 | Course 5     | 114.48 | Standard
+         6 | Course 6     | 138.84 | Standard
+         7 | Course 7     | 171.11 | Premium
+         8 | Course 8     | 166.84 | Premium
+         9 | Course 9     | 159.74 | Premium
+        10 | Course 10    |  89.57 | Standard
+        11 | Course 11    | 187.82 | Premium
+        12 | Course 12    | 206.39 | Premium
+        13 | Course 13    | 131.63 | Standard
+        14 | Course 14    |  77.92 | Standard
+        15 | Course 15    | 109.66 | Standard
+        16 | Course 16    | 105.72 | Standard
+        17 | Course 17    | 178.58 | Premium
+        18 | Course 18    | 203.50 | Premium
+(18 rows)
+
+psql:08_case_queries.sql:32: ERROR:  syntax error at or near "COUNT"
+LINE 14:         COUNT(e.course_id) AS enrollment_count,
+                 ^
+psql:08_case_queries.sql:53: ERROR:  syntax error at or near "'Average'"
+LINE 8:         WHEN t.avg_rating >= 3 'Average'
+                                       ^

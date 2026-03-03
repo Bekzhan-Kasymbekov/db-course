@@ -1,0 +1,62 @@
+ user_id | first_name | last_name  |       email        
+---------+------------+------------+--------------------
+      11 | Student1   | Lastname1  | student1@mail.com
+      12 | Student2   | Lastname2  | student2@mail.com
+      13 | Student3   | Lastname3  | student3@mail.com
+      14 | Student4   | Lastname4  | student4@mail.com
+      15 | Student5   | Lastname5  | student5@mail.com
+      16 | Student6   | Lastname6  | student6@mail.com
+      17 | Student7   | Lastname7  | student7@mail.com
+      18 | Student8   | Lastname8  | student8@mail.com
+      19 | Student9   | Lastname9  | student9@mail.com
+      20 | Student10  | Lastname10 | student10@mail.com
+      21 | Student11  | Lastname11 | student11@mail.com
+      22 | Student12  | Lastname12 | student12@mail.com
+      23 | Student13  | Lastname13 | student13@mail.com
+      24 | Student14  | Lastname14 | student14@mail.com
+      25 | Student15  | Lastname15 | student15@mail.com
+      26 | Student16  | Lastname16 | student16@mail.com
+      27 | Student17  | Lastname17 | student17@mail.com
+      28 | Student18  | Lastname18 | student18@mail.com
+      29 | Student19  | Lastname19 | student19@mail.com
+      30 | Student20  | Lastname20 | student20@mail.com
+      31 | Student21  | Lastname21 | student21@mail.com
+      32 | Student22  | Lastname22 | student22@mail.com
+      33 | Student23  | Lastname23 | student23@mail.com
+      34 | Student24  | Lastname24 | student24@mail.com
+      35 | Student25  | Lastname25 | student25@mail.com
+      36 | Student26  | Lastname26 | student26@mail.com
+      37 | Student27  | Lastname27 | student27@mail.com
+      38 | Student28  | Lastname28 | student28@mail.com
+      39 | Student29  | Lastname29 | student29@mail.com
+      40 | Student30  | Lastname30 | student30@mail.com
+      41 | Student31  | Lastname31 | student31@mail.com
+      42 | Student32  | Lastname32 | student32@mail.com
+      43 | Student33  | Lastname33 | student33@mail.com
+      44 | Student34  | Lastname34 | student34@mail.com
+      45 | Student35  | Lastname35 | student35@mail.com
+(35 rows)
+
+ course_id | course_title 
+-----------+--------------
+         1 | Course 1
+        10 | Course 10
+        11 | Course 11
+        12 | Course 12
+        13 | Course 13
+        14 | Course 14
+        15 | Course 15
+        16 | Course 16
+        17 | Course 17
+        18 | Course 18
+(10 rows)
+
+ user_id | first_name  | last_name |          email           
+---------+-------------+-----------+--------------------------
+       5 | Instructor3 | Teach3    | instructor3@platform.com
+(1 row)
+
+ user_id | first_name | last_name 
+---------+------------+-----------
+(0 rows)
+

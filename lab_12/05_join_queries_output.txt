@@ -1,0 +1,316 @@
+      full_name       | course_title 
+----------------------+--------------
+ Student1 Lastname1   | Course 13
+ Student1 Lastname1   | Course 10
+ Student1 Lastname1   | Course 15
+ Student1 Lastname1   | Course 14
+ Student1 Lastname1   | Course 2
+ Student1 Lastname1   | Course 8
+ Student10 Lastname10 | Course 11
+ Student10 Lastname10 | Course 10
+ Student10 Lastname10 | Course 6
+ Student10 Lastname10 | Course 2
+ Student10 Lastname10 | Course 3
+ Student10 Lastname10 | Course 16
+ Student10 Lastname10 | Course 15
+ Student10 Lastname10 | Course 13
+ Student11 Lastname11 | Course 12
+ Student11 Lastname11 | Course 11
+ Student11 Lastname11 | Course 9
+ Student11 Lastname11 | Course 8
+ Student11 Lastname11 | Course 17
+ Student11 Lastname11 | Course 6
+ Student11 Lastname11 | Course 5
+ Student11 Lastname11 | Course 3
+ Student11 Lastname11 | Course 15
+ Student11 Lastname11 | Course 14
+ Student11 Lastname11 | Course 13
+ Student12 Lastname12 | Course 5
+ Student12 Lastname12 | Course 4
+ Student12 Lastname12 | Course 1
+ Student12 Lastname12 | Course 18
+ Student12 Lastname12 | Course 15
+ Student12 Lastname12 | Course 17
+ Student13 Lastname13 | Course 8
+ Student13 Lastname13 | Course 11
+ Student13 Lastname13 | Course 1
+ Student13 Lastname13 | Course 12
+ Student13 Lastname13 | Course 18
+ Student13 Lastname13 | Course 16
+ Student13 Lastname13 | Course 2
+ Student14 Lastname14 | Course 15
+ Student14 Lastname14 | Course 9
+ Student14 Lastname14 | Course 10
+ Student14 Lastname14 | Course 13
+ Student14 Lastname14 | Course 17
+ Student14 Lastname14 | Course 8
+ Student15 Lastname15 | Course 4
+ Student15 Lastname15 | Course 14
+ Student15 Lastname15 | Course 11
+ Student15 Lastname15 | Course 9
+ Student15 Lastname15 | Course 10
+ Student15 Lastname15 | Course 3
+ Student16 Lastname16 | Course 4
+ Student16 Lastname16 | Course 18
+ Student16 Lastname16 | Course 17
+ Student16 Lastname16 | Course 13
+ Student16 Lastname16 | Course 12
+ Student16 Lastname16 | Course 7
+ Student16 Lastname16 | Course 6
+ Student16 Lastname16 | Course 5
+ Student17 Lastname17 | Course 2
+ Student17 Lastname17 | Course 3
+ Student17 Lastname17 | Course 6
+ Student17 Lastname17 | Course 9
+ Student17 Lastname17 | Course 11
+ Student17 Lastname17 | Course 14
+ Student17 Lastname17 | Course 15
+ Student17 Lastname17 | Course 16
+ Student17 Lastname17 | Course 17
+ Student17 Lastname17 | Course 18
+ Student18 Lastname18 | Course 2
+ Student18 Lastname18 | Course 10
+ Student18 Lastname18 | Course 11
+ Student18 Lastname18 | Course 15
+ Student18 Lastname18 | Course 17
+ Student19 Lastname19 | Course 1
+ Student19 Lastname19 | Course 4
+ Student19 Lastname19 | Course 7
+ Student19 Lastname19 | Course 10
+ Student19 Lastname19 | Course 13
+ Student19 Lastname19 | Course 14
+ Student19 Lastname19 | Course 17
+ Student2 Lastname2   | Course 18
+ Student2 Lastname2   | Course 15
+ Student2 Lastname2   | Course 14
+ Student2 Lastname2   | Course 10
+ Student2 Lastname2   | Course 5
+ Student2 Lastname2   | Course 3
+ Student2 Lastname2   | Course 2
+ Student2 Lastname2   | Course 1
+ Student20 Lastname20 | Course 14
+ Student20 Lastname20 | Course 4
+ Student20 Lastname20 | Course 7
+ Student20 Lastname20 | Course 12
+ Student20 Lastname20 | Course 13
+ Student21 Lastname21 | Course 4
+ Student21 Lastname21 | Course 18
+ Student21 Lastname21 | Course 16
+ Student21 Lastname21 | Course 12
+ Student21 Lastname21 | Course 11
+ Student21 Lastname21 | Course 10
+ Student21 Lastname21 | Course 8
+ Student21 Lastname21 | Course 6
+ Student21 Lastname21 | Course 5
+ Student22 Lastname22 | Course 14
+ Student22 Lastname22 | Course 13
+ Student22 Lastname22 | Course 8
+ Student22 Lastname22 | Course 3
+ Student22 Lastname22 | Course 2
+ Student22 Lastname22 | Course 15
+ Student23 Lastname23 | Course 17
+ Student23 Lastname23 | Course 13
+ Student23 Lastname23 | Course 8
+ Student23 Lastname23 | Course 14
+ Student24 Lastname24 | Course 16
+ Student24 Lastname24 | Course 15
+ Student24 Lastname24 | Course 8
+ Student24 Lastname24 | Course 7
+ Student24 Lastname24 | Course 5
+ Student24 Lastname24 | Course 4
+ Student24 Lastname24 | Course 2
+ Student25 Lastname25 | Course 14
+ Student25 Lastname25 | Course 13
+ Student25 Lastname25 | Course 9
+ Student25 Lastname25 | Course 17
+ Student25 Lastname25 | Course 4
+ Student25 Lastname25 | Course 8
+ Student26 Lastname26 | Course 5
+ Student26 Lastname26 | Course 4
+ Student26 Lastname26 | Course 9
+ Student26 Lastname26 | Course 10
+ Student26 Lastname26 | Course 16
+ Student26 Lastname26 | Course 17
+ Student27 Lastname27 | Course 5
+ Student27 Lastname27 | Course 17
+ Student27 Lastname27 | Course 14
+ Student27 Lastname27 | Course 9
+ Student28 Lastname28 | Course 7
+ Student28 Lastname28 | Course 6
+ Student28 Lastname28 | Course 17
+ Student28 Lastname28 | Course 12
+ Student28 Lastname28 | Course 11
+ Student29 Lastname29 | Course 9
+ Student29 Lastname29 | Course 1
+ Student29 Lastname29 | Course 16
+ Student29 Lastname29 | Course 13
+ Student29 Lastname29 | Course 4
+ Student3 Lastname3   | Course 13
+ Student3 Lastname3   | Course 1
+ Student3 Lastname3   | Course 16
+ Student3 Lastname3   | Course 8
+ Student30 Lastname30 | Course 3
+ Student30 Lastname30 | Course 14
+ Student30 Lastname30 | Course 16
+ Student30 Lastname30 | Course 18
+ Student30 Lastname30 | Course 12
+ Student30 Lastname30 | Course 11
+ Student30 Lastname30 | Course 10
+ Student30 Lastname30 | Course 9
+ Student30 Lastname30 | Course 8
+ Student30 Lastname30 | Course 6
+ Student30 Lastname30 | Course 5
+ Student30 Lastname30 | Course 4
+ Student30 Lastname30 | Course 13
+ Student30 Lastname30 | Course 2
+ Student30 Lastname30 | Course 1
+ Student31 Lastname31 | Course 11
+ Student31 Lastname31 | Course 1
+ Student31 Lastname31 | Course 2
+ Student31 Lastname31 | Course 5
+ Student31 Lastname31 | Course 7
+ Student31 Lastname31 | Course 13
+ Student31 Lastname31 | Course 16
+ Student31 Lastname31 | Course 17
+ Student31 Lastname31 | Course 18
+ Student32 Lastname32 | Course 11
+ Student32 Lastname32 | Course 10
+ Student32 Lastname32 | Course 7
+ Student32 Lastname32 | Course 2
+ Student32 Lastname32 | Course 1
+ Student32 Lastname32 | Course 15
+ Student32 Lastname32 | Course 14
+ Student32 Lastname32 | Course 13
+ Student32 Lastname32 | Course 12
+ Student32 Lastname32 | Course 18
+ Student33 Lastname33 | Course 10
+ Student33 Lastname33 | Course 6
+ Student33 Lastname33 | Course 3
+ Student33 Lastname33 | Course 1
+ Student34 Lastname34 | Course 15
+ Student34 Lastname34 | Course 11
+ Student34 Lastname34 | Course 10
+ Student34 Lastname34 | Course 4
+ Student34 Lastname34 | Course 3
+ Student34 Lastname34 | Course 14
+ Student35 Lastname35 | Course 13
+ Student35 Lastname35 | Course 11
+ Student35 Lastname35 | Course 8
+ Student35 Lastname35 | Course 6
+ Student35 Lastname35 | Course 1
+ Student35 Lastname35 | Course 15
+ Student4 Lastname4   | Course 5
+ Student4 Lastname4   | Course 18
+ Student4 Lastname4   | Course 14
+ Student4 Lastname4   | Course 13
+ Student4 Lastname4   | Course 12
+ Student4 Lastname4   | Course 10
+ Student4 Lastname4   | Course 8
+ Student4 Lastname4   | Course 7
+ Student4 Lastname4   | Course 6
+ Student4 Lastname4   | Course 4
+ Student4 Lastname4   | Course 2
+ Student5 Lastname5   | Course 17
+ Student5 Lastname5   | Course 1
+ Student5 Lastname5   | Course 7
+ Student5 Lastname5   | Course 8
+ Student5 Lastname5   | Course 10
+ Student5 Lastname5   | Course 6
+ Student5 Lastname5   | Course 11
+ Student5 Lastname5   | Course 14
+ Student5 Lastname5   | Course 15
+ Student6 Lastname6   | Course 12
+ Student6 Lastname6   | Course 5
+ Student6 Lastname6   | Course 7
+ Student6 Lastname6   | Course 9
+ Student6 Lastname6   | Course 16
+ Student7 Lastname7   | Course 18
+ Student7 Lastname7   | Course 5
+ Student7 Lastname7   | Course 7
+ Student7 Lastname7   | Course 12
+ Student7 Lastname7   | Course 13
+ Student7 Lastname7   | Course 16
+ Student7 Lastname7   | Course 17
+ Student8 Lastname8   | Course 11
+ Student8 Lastname8   | Course 3
+ Student8 Lastname8   | Course 4
+ Student8 Lastname8   | Course 7
+ Student8 Lastname8   | Course 9
+ Student8 Lastname8   | Course 15
+ Student9 Lastname9   | Course 2
+ Student9 Lastname9   | Course 3
+ Student9 Lastname9   | Course 13
+ Student9 Lastname9   | Course 12
+ Student9 Lastname9   | Course 10
+ Student9 Lastname9   | Course 9
+ Student9 Lastname9   | Course 6
+ Student9 Lastname9   | Course 5
+ Student9 Lastname9   | Course 4
+(246 rows)
+
+     full_name      | course_title 
+--------------------+--------------
+ Instructor1 Teach1 | Course 1
+ Instructor1 Teach1 | Course 2
+ Instructor1 Teach1 | Course 3
+ Instructor1 Teach1 | Course 4
+ Instructor1 Teach1 | Course 5
+ Instructor1 Teach1 | Course 6
+ Instructor1 Teach1 | Course 7
+ Instructor1 Teach1 | Course 8
+ Instructor1 Teach1 | Course 9
+ Instructor1 Teach1 | Course 10
+ Instructor1 Teach1 | Course 11
+ Instructor1 Teach1 | Course 12
+ Instructor1 Teach1 | Course 13
+ Instructor1 Teach1 | Course 14
+ Instructor1 Teach1 | Course 15
+ Instructor1 Teach1 | Course 16
+ Instructor1 Teach1 | Course 17
+ Instructor1 Teach1 | Course 18
+(18 rows)
+
+ course_title | lesson_count 
+--------------+--------------
+ Course 11    |            5
+ Course 9     |            5
+ Course 15    |            5
+ Course 3     |            5
+ Course 17    |            5
+ Course 5     |            5
+ Course 4     |            5
+ Course 10    |            5
+ Course 6     |            5
+ Course 14    |            5
+ Course 13    |            5
+ Course 2     |            5
+ Course 16    |            5
+ Course 7     |            5
+ Course 12    |            5
+ Course 1     |            5
+ Course 18    |            5
+ Course 8     |            5
+(18 rows)
+
+ course_title | assignment_count 
+--------------+------------------
+ Course 11    |                4
+ Course 9     |                4
+ Course 15    |                4
+ Course 3     |                4
+ Course 17    |                4
+ Course 5     |                4
+ Course 4     |                4
+ Course 10    |                4
+ Course 6     |                4
+ Course 14    |                4
+ Course 13    |                4
+ Course 2     |                4
+ Course 16    |                4
+ Course 7     |                4
+ Course 12    |                4
+ Course 1     |                4
+ Course 18    |                4
+ Course 8     |                4
+(18 rows)
+

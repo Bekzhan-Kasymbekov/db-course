@@ -1,0 +1,58 @@
+ user_id |      full_name       
+---------+----------------------
+      11 | Student1 Lastname1
+      12 | Student2 Lastname2
+      13 | Student3 Lastname3
+      14 | Student4 Lastname4
+      15 | Student5 Lastname5
+      16 | Student6 Lastname6
+      17 | Student7 Lastname7
+      18 | Student8 Lastname8
+      19 | Student9 Lastname9
+      20 | Student10 Lastname10
+      21 | Student11 Lastname11
+      22 | Student12 Lastname12
+      23 | Student13 Lastname13
+      24 | Student14 Lastname14
+      25 | Student15 Lastname15
+      26 | Student16 Lastname16
+      27 | Student17 Lastname17
+      28 | Student18 Lastname18
+      29 | Student19 Lastname19
+      30 | Student20 Lastname20
+      31 | Student21 Lastname21
+      32 | Student22 Lastname22
+      33 | Student23 Lastname23
+      34 | Student24 Lastname24
+      35 | Student25 Lastname25
+      36 | Student26 Lastname26
+      37 | Student27 Lastname27
+      38 | Student28 Lastname28
+      39 | Student29 Lastname29
+      40 | Student30 Lastname30
+      41 | Student31 Lastname31
+      42 | Student32 Lastname32
+      43 | Student33 Lastname33
+      44 | Student34 Lastname34
+      45 | Student35 Lastname35
+(35 rows)
+
+ user_id | full_name 
+---------+-----------
+(0 rows)
+
+ course_id | course_title 
+-----------+--------------
+(0 rows)
+
+ user_id |     full_name      
+---------+--------------------
+       4 | Instructor2 Teach2
+       5 | Instructor3 Teach3
+       6 | Instructor4 Teach4
+       7 | Instructor5 Teach5
+       8 | Instructor6 Teach6
+       9 | Instructor7 Teach7
+      10 | Instructor8 Teach8
+(7 rows)
+

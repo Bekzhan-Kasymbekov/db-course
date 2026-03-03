@@ -1,0 +1,99 @@
+ user_id |      full_name       
+---------+----------------------
+      15 | Student5 Lastname5
+      27 | Student17 Lastname17
+      24 | Student14 Lastname14
+      22 | Student12 Lastname12
+      37 | Student27 Lastname27
+      33 | Student23 Lastname23
+      41 | Student31 Lastname31
+      35 | Student25 Lastname25
+      26 | Student16 Lastname16
+      16 | Student6 Lastname6
+      36 | Student26 Lastname26
+      19 | Student9 Lastname9
+      14 | Student4 Lastname4
+      45 | Student35 Lastname35
+      23 | Student13 Lastname13
+      13 | Student3 Lastname3
+      18 | Student8 Lastname8
+      30 | Student20 Lastname20
+      29 | Student19 Lastname19
+      42 | Student32 Lastname32
+      38 | Student28 Lastname28
+      31 | Student21 Lastname21
+      39 | Student29 Lastname29
+      34 | Student24 Lastname24
+      17 | Student7 Lastname7
+      25 | Student15 Lastname15
+      21 | Student11 Lastname11
+      20 | Student10 Lastname10
+      12 | Student2 Lastname2
+      44 | Student34 Lastname34
+      11 | Student1 Lastname1
+      32 | Student22 Lastname22
+      40 | Student30 Lastname30
+      28 | Student18 Lastname18
+(34 rows)
+
+ course_id | course_title 
+-----------+--------------
+         1 | Course 1
+         2 | Course 2
+         3 | Course 3
+         4 | Course 4
+         5 | Course 5
+         6 | Course 6
+         7 | Course 7
+         8 | Course 8
+         9 | Course 9
+        10 | Course 10
+        11 | Course 11
+        12 | Course 12
+        13 | Course 13
+        14 | Course 14
+        15 | Course 15
+        16 | Course 16
+        17 | Course 17
+        18 | Course 18
+(18 rows)
+
+ user_id |      full_name       | course_count 
+---------+----------------------+--------------
+      29 | Student19 Lastname19 |            7
+      34 | Student24 Lastname24 |            7
+      35 | Student25 Lastname25 |            6
+      45 | Student35 Lastname35 |            6
+      39 | Student29 Lastname29 |            5
+      36 | Student26 Lastname26 |            6
+      31 | Student21 Lastname21 |            9
+      14 | Student4 Lastname4   |           11
+      22 | Student12 Lastname12 |            6
+      13 | Student3 Lastname3   |            4
+      16 | Student6 Lastname6   |            5
+      44 | Student34 Lastname34 |            6
+      11 | Student1 Lastname1   |            6
+      42 | Student32 Lastname32 |           10
+      41 | Student31 Lastname31 |            9
+      40 | Student30 Lastname30 |           15
+      43 | Student33 Lastname33 |            4
+      32 | Student22 Lastname22 |            6
+      38 | Student28 Lastname28 |            5
+      15 | Student5 Lastname5   |            9
+      26 | Student16 Lastname16 |            8
+      12 | Student2 Lastname2   |            8
+      24 | Student14 Lastname14 |            6
+      19 | Student9 Lastname9   |            9
+      25 | Student15 Lastname15 |            6
+      30 | Student20 Lastname20 |            5
+      21 | Student11 Lastname11 |           11
+      17 | Student7 Lastname7   |            7
+      37 | Student27 Lastname27 |            4
+      28 | Student18 Lastname18 |            5
+      20 | Student10 Lastname10 |            8
+      33 | Student23 Lastname23 |            4
+      18 | Student8 Lastname8   |            6
+      27 | Student17 Lastname17 |           10
+      23 | Student13 Lastname13 |            7
+(35 rows)
+

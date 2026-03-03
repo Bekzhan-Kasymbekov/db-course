@@ -1,0 +1,87 @@
+ country | student_count 
+---------+---------------
+ Canada  |             5
+ France  |             6
+ Germany |             5
+ India   |             4
+ Japan   |             3
+ UK      |             6
+ USA     |             6
+(7 rows)
+
+ instructor_id | first_name  | last_name | course_count 
+---------------+-------------+-----------+--------------
+             3 | Instructor1 | Teach1    |           18
+(1 row)
+
+ category_id | category_name |      avg_price       
+-------------+---------------+----------------------
+           1 | Programming   | 130.9888888888888889
+(1 row)
+
+ course_id | course_title | total_revenue 
+-----------+--------------+---------------
+         1 | Course 1     |        745.42
+         2 | Course 2     |        256.66
+         3 | Course 3     |        443.99
+         4 | Course 4     |        428.91
+         5 | Course 5     |        575.98
+         6 | Course 6     |        722.87
+         7 | Course 7     |        735.19
+         8 | Course 8     |        482.05
+         9 | Course 9     |        156.37
+        10 | Course 10    |        763.50
+        11 | Course 11    |        369.52
+        12 | Course 12    |        770.46
+        13 | Course 13    |        622.10
+        14 | Course 14    |        554.78
+        15 | Course 15    |        203.75
+        16 | Course 16    |        743.40
+        17 | Course 17    |        592.96
+        18 | Course 18    |        306.16
+(18 rows)
+
+ course_id | course_title | student_count 
+-----------+--------------+---------------
+        11 | Course 11    |            15
+         9 | Course 9     |            12
+        15 | Course 15    |            15
+         3 | Course 3     |            11
+        17 | Course 17    |            15
+         5 | Course 5     |            14
+         4 | Course 4     |            15
+        10 | Course 10    |            16
+         6 | Course 6     |            12
+        14 | Course 14    |            16
+        13 | Course 13    |            19
+         2 | Course 2     |            13
+        16 | Course 16    |            12
+         7 | Course 7     |            12
+        12 | Course 12    |            12
+         1 | Course 1     |            12
+        18 | Course 18    |            11
+         8 | Course 8     |            14
+(18 rows)
+
+ course_id | course_title |     avg_rating     
+-----------+--------------+--------------------
+        11 | Course 11    | 2.6666666666666667
+         9 | Course 9     | 3.6250000000000000
+        15 | Course 15    | 2.8750000000000000
+         3 | Course 3     | 3.7500000000000000
+        17 | Course 17    | 2.7777777777777778
+         5 | Course 5     | 3.0909090909090909
+         4 | Course 4     | 3.3333333333333333
+        10 | Course 10    | 3.1666666666666667
+         6 | Course 6     | 2.8333333333333333
+        14 | Course 14    | 3.4285714285714286
+        13 | Course 13    | 3.4444444444444444
+         2 | Course 2     | 2.6000000000000000
+        16 | Course 16    | 3.3333333333333333
+         7 | Course 7     | 1.6000000000000000
+        12 | Course 12    | 3.0000000000000000
+         1 | Course 1     | 2.7142857142857143
+        18 | Course 18    | 4.2500000000000000
+         8 | Course 8     | 3.8000000000000000
+(18 rows)
+
