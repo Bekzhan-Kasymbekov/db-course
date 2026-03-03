@@ -401,14 +401,54 @@ All scripts are executed in the following order:
 2. `02_seed.sql`
 3. `03_aggregates.sql`
 
-Execution is automated using:
+---
 
-```bash
-./run_all.sh
-```
+# Lab #14: Joining Tables in PostgreSQL
+
+In this lab, I implemented various types of SQL joins to understand how relational data is reconstructed across normalized tables.
+
+---
+
+## Topics Covered
+
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL OUTER JOIN
+- CROSS JOIN
+- Multi-table joins
+- Self join
+- Many-to-many relationships via junction table
+- NULL handling in outer joins
+
+---
+
+## Database Schema
+
+The schema includes:
+
+- `students`
+- `courses`
+- `enrollments` (many-to-many junction table)
+- `employees` (self-referencing table)
+
+---
+
+## Relevant Files
+
+- `01_schema.sql`
+- `02_seed.sql`
+- `03_inner_join.sql`
+- `04_left_join.sql`
+- `05_right_full_cross.sql`
+- `06_multi_self_m2m.sql`
+- `run_all.sh`
+- `output.txt`
+
+---
 
 # How to Run the Scripts
-```
+
 Example command format:
 
 ```bash

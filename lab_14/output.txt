@@ -1,0 +1,73 @@
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 3
+INSERT 0 3
+INSERT 0 4
+INSERT 0 5
+ student_name |    course_name    | grade 
+--------------+-------------------+-------
+ Alice        | Databases         |    90
+ Alice        | Algorithms        |    85
+ Bob          | Databases         |    78
+ Charlie      | Operating Systems |      
+(4 rows)
+
+ student_name |    course_name    | grade 
+--------------+-------------------+-------
+ Alice        | Databases         |    90
+ Alice        | Algorithms        |    85
+ Bob          | Databases         |    78
+ Charlie      | Operating Systems |      
+(4 rows)
+
+ student_name | grade 
+--------------+-------
+ Alice        |    90
+ Alice        |    85
+ Bob          |    78
+ Charlie      |      
+(4 rows)
+
+ student_name | grade 
+--------------+-------
+ Alice        |    90
+ Alice        |    85
+ Bob          |    78
+ Charlie      |      
+(4 rows)
+
+ student_name |    course_name    
+--------------+-------------------
+ Alice        | Databases
+ Alice        | Algorithms
+ Alice        | Operating Systems
+ Bob          | Databases
+ Bob          | Algorithms
+ Bob          | Operating Systems
+ Charlie      | Databases
+ Charlie      | Algorithms
+ Charlie      | Operating Systems
+(9 rows)
+
+  employee  |  manager  
+------------+-----------
+ CEO        | 
+ Manager A  | CEO
+ Manager B  | CEO
+ Employee 1 | Manager A
+ Employee 2 | Manager B
+(5 rows)
+
+ student_name | course_name | grade 
+--------------+-------------+-------
+ Alice        | Algorithms  |    85
+ Alice        | Databases   |    90
+ Bob          | Databases   |    78
+(3 rows)
+
