@@ -56,7 +56,25 @@
         16 | Course 16
         17 | Course 17
         18 | Course 18
-(18 rows)
+        19 | Course 1
+        20 | Course 2
+        21 | Course 3
+        22 | Course 4
+        23 | Course 5
+        24 | Course 6
+        25 | Course 7
+        26 | Course 8
+        27 | Course 9
+        28 | Course 10
+        29 | Course 11
+        30 | Course 12
+        31 | Course 13
+        32 | Course 14
+        33 | Course 15
+        34 | Course 16
+        35 | Course 17
+        36 | Course 18
+(36 rows)
 
  user_id |      full_name       | course_count 
 ---------+----------------------+--------------

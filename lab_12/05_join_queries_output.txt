@@ -268,49 +268,103 @@
  Instructor1 Teach1 | Course 16
  Instructor1 Teach1 | Course 17
  Instructor1 Teach1 | Course 18
-(18 rows)
+ Instructor7 Teach7 | Course 1
+ Instructor7 Teach7 | Course 2
+ Instructor7 Teach7 | Course 3
+ Instructor7 Teach7 | Course 4
+ Instructor7 Teach7 | Course 5
+ Instructor7 Teach7 | Course 6
+ Instructor7 Teach7 | Course 7
+ Instructor7 Teach7 | Course 8
+ Instructor7 Teach7 | Course 9
+ Instructor7 Teach7 | Course 10
+ Instructor7 Teach7 | Course 11
+ Instructor7 Teach7 | Course 12
+ Instructor7 Teach7 | Course 13
+ Instructor7 Teach7 | Course 14
+ Instructor7 Teach7 | Course 15
+ Instructor7 Teach7 | Course 16
+ Instructor7 Teach7 | Course 17
+ Instructor7 Teach7 | Course 18
+(36 rows)
 
  course_title | lesson_count 
 --------------+--------------
- Course 11    |            5
- Course 9     |            5
- Course 15    |            5
- Course 3     |            5
- Course 17    |            5
- Course 5     |            5
  Course 4     |            5
- Course 10    |            5
- Course 6     |            5
- Course 14    |            5
- Course 13    |            5
- Course 2     |            5
- Course 16    |            5
- Course 7     |            5
- Course 12    |            5
- Course 1     |            5
- Course 18    |            5
+ Course 11    |           10
+ Course 9     |           10
+ Course 15    |           10
  Course 8     |            5
-(18 rows)
+ Course 1     |            5
+ Course 12    |            5
+ Course 3     |            5
+ Course 3     |           10
+ Course 17    |           10
+ Course 10    |            5
+ Course 5     |           10
+ Course 11    |            5
+ Course 4     |           10
+ Course 16    |            5
+ Course 10    |           10
+ Course 17    |            5
+ Course 6     |           10
+ Course 18    |            5
+ Course 13    |            5
+ Course 14    |           10
+ Course 13    |           10
+ Course 2     |           10
+ Course 16    |           10
+ Course 14    |            5
+ Course 7     |           10
+ Course 12    |           10
+ Course 6     |            5
+ Course 7     |            5
+ Course 2     |            5
+ Course 15    |            5
+ Course 1     |           10
+ Course 18    |           10
+ Course 9     |            5
+ Course 5     |            5
+ Course 8     |           10
+(36 rows)
 
  course_title | assignment_count 
 --------------+------------------
- Course 11    |                4
- Course 9     |                4
- Course 15    |                4
- Course 3     |                4
- Course 17    |                4
- Course 5     |                4
  Course 4     |                4
- Course 10    |                4
- Course 6     |                4
- Course 14    |                4
- Course 13    |                4
- Course 2     |                4
- Course 16    |                4
- Course 7     |                4
- Course 12    |                4
- Course 1     |                4
- Course 18    |                4
+ Course 11    |                8
+ Course 9     |                8
+ Course 15    |                8
  Course 8     |                4
-(18 rows)
+ Course 1     |                4
+ Course 12    |                4
+ Course 3     |                4
+ Course 3     |                8
+ Course 17    |                8
+ Course 10    |                4
+ Course 5     |                8
+ Course 11    |                4
+ Course 4     |                8
+ Course 16    |                4
+ Course 10    |                8
+ Course 17    |                4
+ Course 6     |                8
+ Course 18    |                4
+ Course 13    |                4
+ Course 14    |                8
+ Course 13    |                8
+ Course 2     |                8
+ Course 16    |                8
+ Course 14    |                4
+ Course 7     |                8
+ Course 12    |                8
+ Course 6     |                4
+ Course 7     |                4
+ Course 2     |                4
+ Course 15    |                4
+ Course 1     |                8
+ Course 18    |                8
+ Course 9     |                4
+ Course 5     |                4
+ Course 8     |                8
+(36 rows)
 

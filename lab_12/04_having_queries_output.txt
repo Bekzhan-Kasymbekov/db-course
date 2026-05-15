@@ -22,12 +22,13 @@
 
  user_id | first_name  | last_name | course_count 
 ---------+-------------+-----------+--------------
+       9 | Instructor7 | Teach7    |           18
        3 | Instructor1 | Teach1    |           18
-(1 row)
+(2 rows)
 
  category_id | category_name | course_count 
 -------------+---------------+--------------
-           1 | Programming   |           18
+           1 | Programming   |           36
 (1 row)
 
  course_id | course_title |     avg_rating     

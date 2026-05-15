@@ -43,7 +43,25 @@
 
  course_id | course_title 
 -----------+--------------
-(0 rows)
+        19 | Course 1
+        20 | Course 2
+        21 | Course 3
+        22 | Course 4
+        23 | Course 5
+        24 | Course 6
+        25 | Course 7
+        26 | Course 8
+        27 | Course 9
+        28 | Course 10
+        29 | Course 11
+        30 | Course 12
+        31 | Course 13
+        32 | Course 14
+        33 | Course 15
+        34 | Course 16
+        35 | Course 17
+        36 | Course 18
+(18 rows)
 
  user_id |     full_name      
 ---------+--------------------
@@ -52,7 +70,6 @@
        6 | Instructor4 Teach4
        7 | Instructor5 Teach5
        8 | Instructor6 Teach6
-       9 | Instructor7 Teach7
       10 | Instructor8 Teach8
-(7 rows)
+(6 rows)
 

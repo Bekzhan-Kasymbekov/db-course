@@ -49,7 +49,17 @@
         16 | Course 16
         17 | Course 17
         18 | Course 18
-(10 rows)
+        19 | Course 1
+        28 | Course 10
+        29 | Course 11
+        30 | Course 12
+        31 | Course 13
+        32 | Course 14
+        33 | Course 15
+        34 | Course 16
+        35 | Course 17
+        36 | Course 18
+(20 rows)
 
  user_id | first_name  | last_name |          email           
 ---------+-------------+-----------+--------------------------

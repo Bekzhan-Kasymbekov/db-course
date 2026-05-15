@@ -18,7 +18,25 @@
         16 | Course 16    | 105.72 | Standard
         17 | Course 17    | 178.58 | Premium
         18 | Course 18    | 203.50 | Premium
-(18 rows)
+        19 | Course 1     | 173.13 | Premium
+        20 | Course 2     |  69.98 | Standard
+        21 | Course 3     | 125.95 | Standard
+        22 | Course 4     | 172.70 | Premium
+        23 | Course 5     | 156.05 | Premium
+        24 | Course 6     |  65.40 | Standard
+        25 | Course 7     | 167.90 | Premium
+        26 | Course 8     |  72.46 | Standard
+        27 | Course 9     | 131.53 | Standard
+        28 | Course 10    | 160.88 | Premium
+        29 | Course 11    | 153.74 | Premium
+        30 | Course 12    |  21.00 | Cheap
+        31 | Course 13    | 108.83 | Standard
+        32 | Course 14    | 103.73 | Standard
+        33 | Course 15    |  72.45 | Standard
+        34 | Course 16    | 125.44 | Standard
+        35 | Course 17    | 117.95 | Standard
+        36 | Course 18    |  48.08 | Cheap
+(36 rows)
 
 psql:08_case_queries.sql:32: ERROR:  syntax error at or near "COUNT"
 LINE 14:         COUNT(e.course_id) AS enrollment_count,
