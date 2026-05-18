@@ -1,0 +1,346 @@
+Digital Wallet & Ledger System
+Schema Design Notes
+
+Project idea:
+This system implements a digital wallet using a ledger-based accounting model.
+Balances are not stored directly. Instead, balances are calculated from ledger entries.
+
+Balance formula:
+balance = SUM(ledger_entries.amount) for a specific account
+
+Core principle:
+The ledger is append-only. Money movement is represented by inserting ledger entries, not by updating balances directly.
+
+
+============================================================
+ENTITIES
+============================================================
+
+1. users
+
+Purpose:
+Represents a registered user of the wallet system.
+
+Fields:
+- id
+  Primary key.
+  Uniquely identifies each user.
+
+- email
+  Unique and required.
+  Used to identify the user.
+
+- created_at
+  Timestamp showing when the user was created.
+
+
+Relationships:
+- One user can have many accounts.
+- A user must exist before accounts can be created for that user.
+
+Relationship:
+users 1 ---- many accounts
+
+
+============================================================
+
+2. accounts
+
+Purpose:
+Represents a wallet account owned by a user.
+
+Fields:
+- id
+  Primary key.
+  Uniquely identifies each account.
+
+- user_id
+  Foreign key referencing users(id).
+  Shows which user owns the account.
+
+- currency_code
+  Three-letter currency code.
+  Default value is 'USD'.
+  Example: USD, EUR, KGS.
+
+- is_active
+  Boolean value showing whether the account is active.
+  Default should be TRUE.
+
+- created_at
+  Timestamp showing when the account was created.
+
+
+Business rules:
+- One user can have multiple accounts.
+- Each account belongs to exactly one user.
+- Account balance is not stored directly.
+- Account balance is calculated from ledger_entries.
+- Negative balances are not allowed.
+- Negative balance prevention is handled in transaction logic using SELECT ... FOR UPDATE.
+
+
+Relationships:
+- Many accounts belong to one user.
+- One account can have many ledger entries.
+
+Relationship:
+users 1 ---- many accounts
+accounts 1 ---- many ledger_entries
+
+
+============================================================
+
+3. transactions
+
+Purpose:
+Represents a logical financial operation.
+
+Examples:
+- deposit
+- withdrawal
+- transfer
+
+Important:
+The transactions table does not store money amounts directly.
+The real financial effect is stored in ledger_entries.
+
+Fields:
+- id
+  Primary key.
+  Uniquely identifies each transaction.
+
+- type
+  Type of transaction.
+  Allowed values:
+  deposit
+  withdrawal
+  transfer
+
+- status
+  Status of transaction.
+  Allowed values:
+  pending
+  completed
+  failed
+
+- reference_id
+  Unique idempotency key.
+  Prevents the same operation from being processed twice.
+
+- created_at
+  Timestamp showing when the transaction was created.
+
+
+Business rules:
+- Every financial operation should create one transaction record.
+- A completed transaction must have at least one ledger entry.
+- A failed transaction should not create completed ledger effects.
+- Transaction amount is not stored here because ledger_entries are the source of truth.
+
+
+Relationships:
+- One transaction can have many ledger entries.
+- Each ledger entry belongs to exactly one transaction.
+
+Relationship:
+transactions 1 ---- many ledger_entries
+
+
+============================================================
+
+4. ledger_entries
+
+Purpose:
+Represents actual movement of money in or out of accounts.
+
+This is the most important table in the system.
+
+Fields:
+- id
+  Primary key.
+  Uniquely identifies each ledger entry.
+
+- transaction_id
+  Foreign key referencing transactions(id).
+  Shows which logical transaction created this ledger entry.
+
+- account_id
+  Foreign key referencing accounts(id).
+  Shows which account this entry affects.
+
+- amount
+  Money amount.
+  Uses NUMERIC(18,2).
+  Positive amount means credit.
+  Negative amount means debit.
+
+- created_at
+  Timestamp showing when the ledger entry was created.
+
+
+Business rules:
+- Ledger entries are append-only.
+- Ledger entries should not be updated or deleted.
+- Positive amount increases account balance.
+- Negative amount decreases account balance.
+- Balance is calculated from the sum of ledger entries.
+- A deposit creates one positive ledger entry.
+- A withdrawal creates one negative ledger entry.
+- A transfer creates two ledger entries:
+  1. Negative entry for the sender account.
+  2. Positive entry for the receiver account.
+- For transfers, the sum of ledger entry amounts must equal zero.
+
+
+Relationships:
+- Many ledger entries belong to one transaction.
+- Many ledger entries belong to one account.
+
+Relationship:
+transactions 1 ---- many ledger_entries
+accounts 1 ---- many ledger_entries
+
+
+============================================================
+RELATIONSHIP SUMMARY
+============================================================
+
+users
+- One user can have many accounts.
+
+accounts
+- Each account belongs to one user.
+- One account can have many ledger entries.
+
+transactions
+- One transaction can have many ledger entries.
+
+ledger_entries
+- Each ledger entry belongs to one transaction.
+- Each ledger entry belongs to one account.
+
+
+ERD-style relationship summary:
+
+users 1 ---- many accounts
+
+accounts 1 ---- many ledger_entries
+
+transactions 1 ---- many ledger_entries
+
+
+============================================================
+LEDGER RULES
+============================================================
+
+Deposit:
+- Creates one transaction with type = deposit.
+- Creates one ledger entry with positive amount.
+- Example:
+  +100.00 to account A
+
+Withdrawal:
+- Creates one transaction with type = withdrawal.
+- Checks that account has enough balance.
+- Creates one ledger entry with negative amount.
+- Example:
+  -50.00 from account A
+
+Transfer:
+- Creates one transaction with type = transfer.
+- Checks that sender account has enough balance.
+- Creates two ledger entries.
+- Example:
+  -25.00 from sender account
+  +25.00 to receiver account
+
+Transfer conservation rule:
+For every transfer transaction:
+SUM(ledger_entries.amount) = 0
+
+
+============================================================
+SYSTEM INVARIANTS
+============================================================
+
+1. No ledger entry can exist without a transaction.
+
+2. No ledger entry can exist without an account.
+
+3. Account balance is never stored directly.
+
+4. Account balance is derived from:
+   SUM(ledger_entries.amount)
+
+5. Withdrawals cannot make an account balance negative.
+
+6. Transfers cannot make the sender account balance negative.
+
+7. Transfers must conserve money:
+   total debits + total credits = 0
+
+8. Ledger entries are immutable.
+
+9. Transaction reference_id must be unique to prevent duplicate processing.
+
+10. Money values must use NUMERIC(18,2), not floating-point types.
+
+
+============================================================
+NOTES FOR SQL IMPLEMENTATION
+============================================================
+
+The SQL schema should include:
+
+users:
+- PRIMARY KEY on id
+- UNIQUE constraint on email
+- NOT NULL on email
+- DEFAULT CURRENT_TIMESTAMP on created_at
+
+accounts:
+- PRIMARY KEY on id
+- FOREIGN KEY user_id REFERENCES users(id)
+- NOT NULL on user_id
+- DEFAULT 'USD' on currency_code
+- CHECK that currency_code has length 3
+- DEFAULT TRUE on is_active
+- DEFAULT CURRENT_TIMESTAMP on created_at
+
+transactions:
+- PRIMARY KEY on id
+- CHECK constraint for allowed transaction types
+- CHECK constraint for allowed statuses
+- UNIQUE constraint on reference_id
+- NOT NULL on reference_id
+- DEFAULT CURRENT_TIMESTAMP on created_at
+
+ledger_entries:
+- PRIMARY KEY on id
+- FOREIGN KEY transaction_id REFERENCES transactions(id)
+- FOREIGN KEY account_id REFERENCES accounts(id)
+- NUMERIC(18,2) for amount
+- CHECK amount <> 0
+- DEFAULT CURRENT_TIMESTAMP on created_at
+
+
+============================================================
+IMPORTANT DESIGN DECISION
+============================================================
+
+The database will enforce structural correctness:
+- primary keys
+- foreign keys
+- unique constraints
+- allowed transaction types
+- allowed transaction statuses
+- valid money amount format
+
+The backend will enforce process correctness:
+- no negative balances
+- transaction atomicity
+- SELECT ... FOR UPDATE
+- rollback safety
+- transfer conservation
+- idempotency behavior
