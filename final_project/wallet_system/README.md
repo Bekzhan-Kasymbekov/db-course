@@ -228,8 +228,11 @@ wallet_system/
 │   ├── index_analysis.md
 │   ├── invariants.md
 │   ├── Wallet_ledger_system_presentation.pdf
+│   ├── Wallet_system_api_demo.mp4
+│   ├── Wallet_system_demo.mp4
+│   ├── Wallet_ledger_system_presentation.pdf
 │   ├── Completion_Certificate_Oracle_Database_Foundations.png
-│   └── wallet_system_erd.md
+│   └── wallet_system_erd.png
 ├── package.json
 ├── package-lock.json
 ├── README.md
