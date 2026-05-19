@@ -227,6 +227,8 @@ wallet_system/
 │   ├── backup_restore.md
 │   ├── index_analysis.md
 │   ├── invariants.md
+│   ├── Wallet_ledger_system_presentation.pdf
+│   ├── Completion_Certificate_Oracle_Database_Foundations.png
 │   └── wallet_system_erd.md
 ├── package.json
 ├── package-lock.json
