@@ -56,11 +56,7 @@ async function authenticate(req, res, next) {
             remote_jwks,
             {
                 issuer: config.keycloak.issuer,
-
-                /*
-                 * will add audience validation later after checking
-                 * the Keycloak token
-                 */
+                audience: config.keycloak.client_id,
             }
         );
 
