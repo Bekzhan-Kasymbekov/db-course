@@ -54,4 +54,50 @@ router.get(
         }
 });
 
+router.post(
+    '/me',
+    authenticate,
+    require_realm_role('wallet_user'),
+    async (req, res, next) => {
+        try {
+            const keycloak_user_id = req.auth.subject;
+            const email = req.auth.token.email;
+
+            if (!email) {
+                const error = new Error(
+                    'Authenticated user does not have an email claim'
+                );
+                error.status_code = 400;
+                throw error;
+            }
+
+            const existing_user =
+                await user_service.get_user_by_keycloak_id(
+                    keycloak_user_id
+                );
+            if (existing_user) {
+                return res.json({
+                    user: existing_user,
+                });
+            }
+
+            const user = await user_service.create_user(
+                email,
+                keycloak_user_id
+            );
+
+            res.status(201).json({
+                user,
+            });
+        } catch (error) {
+            if (error.code === '23505') {
+                error.status_code = 409;
+                error.message =
+                    'A wallet user with this identity or email already exists';
+            }
+
+            next(error);
+        }
+    }
+);
 module.exports = router;
