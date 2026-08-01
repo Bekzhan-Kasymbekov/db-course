@@ -10,6 +10,16 @@ const config = {
         password: process.env.DB_PASSWORD,
         database: process.env.DB_NAME || 'wallet_system',
     },
+
+    keycloak: {
+        issuer:
+            process.env.KEYCLOAK_ISSUER ||
+            'http://localhost:8080/realms/wallet',
+
+        client_id:
+            process.env.KEYCLOAK_CLIENT_ID ||
+            'wallet-api',
+    },
 };
 
 module.exports = config;
