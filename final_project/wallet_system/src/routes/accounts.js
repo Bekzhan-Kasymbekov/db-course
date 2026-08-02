@@ -5,10 +5,22 @@ const {
     is_positive_integer,
     is_valid_currency_code,
 } = require('../utils/validators');
+const authenticate = require('../middlewares/authenticate');
+
+const {
+    require_realm_role,
+} = require('../middlewares/authorize');
+
+const {
+    require_account_access,
+} = require('../middlewares/accountAuthorization');
 
 const router = express.Router();
 
-router.post('/', async (req, res, next) => {
+router.post('/',
+    authenticate,
+    require_realm_role('wallet_admin'),
+    async (req, res, next) => {
     try {
         const { user_id, currency_code = 'USD' } = req.body;
 
@@ -19,12 +31,15 @@ router.post('/', async (req, res, next) => {
         }
 
         if (!is_valid_currency_code(currency_code)) {
-            const error = new Error('currency_code must be a 3-letter uppercase code, for example USD');
+            const error = new Error(
+                'currency_code must be a 3-letter uppercase code, for example USD'
+            );
             error.status_code = 400;
             throw error;
         }
 
-        const account = await account_service.create_account(
+        const account =
+            await account_service.create_account(
             Number(user_id),
             currency_code
         );
@@ -42,7 +57,11 @@ router.post('/', async (req, res, next) => {
     }
 });
 
-router.get('/:id/balance', async (req, res, next) => {
+router.get(
+    '/:id/balance',
+    authenticate,
+    require_account_access,
+    async (req, res, next) => {
     try {
         const { id } = req.params;
 
@@ -54,12 +73,6 @@ router.get('/:id/balance', async (req, res, next) => {
 
         const balance = await account_service.get_account_balance(Number(id));
 
-        if (!balance) {
-            const error = new Error('Account does not exist');
-            error.status_code = 404;
-            throw error;
-        }
-
         res.json({
             account: balance,
         });
@@ -68,21 +81,17 @@ router.get('/:id/balance', async (req, res, next) => {
     }
 });
 
-router.get('/:id/transactions', async (req, res, next) => {
+router.get(
+    '/:id/transactions',
+    authenticate,
+    require_account_access,
+    async (req, res, next) => {
     try {
         const { id } = req.params;
 
         if (!is_positive_integer(id)) {
             const error = new Error('Valid account id is required');
             error.status_code = 400;
-            throw error;
-        }
-
-        const account = await account_service.get_account_balance(Number(id));
-
-        if (!account) {
-            const error = new Error('Account does not exist');
-            error.status_code = 404;
             throw error;
         }
 
@@ -97,9 +106,13 @@ router.get('/:id/transactions', async (req, res, next) => {
     }
 });
 
-router.get('/', async (req, res, next) => {
+router.get('/',
+    authenticate,
+    require_realm_role('wallet_admin', 'wallet_auditor'),
+    async (req, res, next) => {
     try {
-        const accounts = await account_service.get_accounts();
+        const accounts =
+            await account_service.get_accounts();
 
         res.json({
             accounts,

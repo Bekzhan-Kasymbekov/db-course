@@ -83,9 +83,27 @@ async function get_account_transactions(account_id) {
     return result.rows;
 }
 
+async function get_account_owner(account_id) {
+    const query = `
+        SELECT
+            a.id AS account_id,
+            a.user_id,
+            u.keycloak_user_id
+        FROM accounts a
+        JOIN users u
+            ON u.id = a.user_id
+        WHERE a.id = $1;
+    `;
+
+    const result = await pool.query(query, [account_id]);
+
+    return result.rows[0] || null;
+}
+
 module.exports = {
     create_account,
     get_accounts,
     get_account_balance,
     get_account_transactions,
+    get_account_owner,
 };

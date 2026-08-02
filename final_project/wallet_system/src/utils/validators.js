@@ -3,7 +3,7 @@ function is_valid_email(email) {
         return false;
     }
 
-    return /^[^\s@]+@[^\s@]+\.[^/s@]+$/.test(email);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 function is_positive_integer(value) {
