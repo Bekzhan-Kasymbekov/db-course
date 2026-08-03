@@ -1,157 +1,234 @@
-# API Examples
+# Authenticated API Examples
 
-## Health Check
+These examples assume that:
+
+- PostgreSQL is running
+- Keycloak is running
+- the Express API is running
+- the shell contains fresh access tokens
+
+Example variables:
+
+```bash
+ADMIN_ACCESS_TOKEN=...
+USER_ACCESS_TOKEN=...
+AUDITOR_ACCESS_TOKEN=...
+```
+
+Access tokens are user-specific and expire. Request a new token after changing a user's roles, account state, or token mappings.
+
+## Public Health Checks
 
 ```bash
 curl -s http://localhost:3000/health | jq
 ```
 
-## Database Health Check
-
 ```bash
 curl -s http://localhost:3000/db-health | jq
 ```
 
-## Create User
+## Inspect the Authenticated Identity
 
 ```bash
-curl -s -X POST http://localhost:3000/users \
+curl -s \
+  -H "Authorization: Bearer $USER_ACCESS_TOKEN" \
+  http://localhost:3000/auth/me |
+jq
+```
+
+## Link a Keycloak User to a Local Wallet User
+
+The first call creates the local user and returns `201 Created`.
+
+Later calls return the existing linked user with `200 OK`.
+
+```bash
+curl -i \
+  -X POST \
+  -H "Authorization: Bearer $USER_ACCESS_TOKEN" \
+  http://localhost:3000/users/me
+```
+
+## Create a Local User
+
+Requires `wallet_admin`.
+
+```bash
+curl -s \
+  -X POST \
+  http://localhost:3000/users \
+  -H "Authorization: Bearer $ADMIN_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
-  -d '{"email":"david@example.com"}' | jq
+  -d '{"email":"david@example.com"}' |
+jq
 ```
 
 ## List Users
 
+Allowed for `wallet_admin` and `wallet_auditor`.
+
 ```bash
-curl -s http://localhost:3000/users | jq
+curl -s \
+  -H "Authorization: Bearer $AUDITOR_ACCESS_TOKEN" \
+  http://localhost:3000/users |
+jq
 ```
 
-## Create Account
+## Create an Account
+
+Requires `wallet_admin`.
 
 ```bash
-curl -s -X POST http://localhost:3000/accounts \
+curl -s \
+  -X POST \
+  http://localhost:3000/accounts \
+  -H "Authorization: Bearer $ADMIN_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
-  -d '{"user_id":4,"currency_code":"USD"}' | jq
+  -d '{
+    "user_id": 107,
+    "currency_code": "USD"
+  }' |
+jq
 ```
 
 ## List Accounts
 
+Allowed for `wallet_admin` and `wallet_auditor`.
+
 ```bash
-curl -s http://localhost:3000/accounts | jq
+curl -s \
+  -H "Authorization: Bearer $AUDITOR_ACCESS_TOKEN" \
+  http://localhost:3000/accounts |
+jq
 ```
 
-## Get Account Balance
+## View an Owned Account Balance
 
 ```bash
-curl -s http://localhost:3000/accounts/1/balance | jq
+curl -s \
+  -H "Authorization: Bearer $USER_ACCESS_TOKEN" \
+  http://localhost:3000/accounts/105/balance |
+jq
 ```
 
-## Get Account Transaction History
+## View an Owned Account's Transactions
 
 ```bash
-curl -s http://localhost:3000/accounts/1/transactions | jq
+curl -s \
+  -H "Authorization: Bearer $USER_ACCESS_TOKEN" \
+  http://localhost:3000/accounts/105/transactions |
+jq
 ```
 
-## List Transactions
+A wallet user receives `403 Forbidden` when the requested account belongs to another local user.
+
+## List All Transactions
+
+Allowed for `wallet_admin` and `wallet_auditor`.
 
 ```bash
-curl -s http://localhost:3000/transactions | jq
+curl -s \
+  -H "Authorization: Bearer $AUDITOR_ACCESS_TOKEN" \
+  http://localhost:3000/transactions |
+jq
 ```
 
 ## Deposit
 
-```bash
-curl -s -X POST http://localhost:3000/transactions/deposit \
-  -H "Content-Type: application/json" \
-  -d '{"account_id":1,"amount":100,"reference_id":"api-deposit-alice-001"}' | jq
-```
-
-## Withdraw
+The recommended authorization policy is to restrict deposits to `wallet_admin`.
 
 ```bash
-curl -s -X POST http://localhost:3000/transactions/withdraw \
+curl -s \
+  -X POST \
+  http://localhost:3000/transactions/deposit \
+  -H "Authorization: Bearer $ADMIN_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
-  -d '{"account_id":1,"amount":50,"reference_id":"api-withdraw-alice-001"}' | jq
+  -d '{
+    "account_id": 105,
+    "amount": 100,
+    "reference_id": "api-deposit-001"
+  }' |
+jq
 ```
 
-## Transfer
+Ownership should be checked against the sender account. A user may receive funds into an account they do not own, but must not transfer funds out of another user's account.
+
+## Authorization Behavior Tests
+
+### No token
 
 ```bash
-curl -s -X POST http://localhost:3000/transactions/transfer \
-  -H "Content-Type: application/json" \
-  -d '{"sender_account_id":1,"receiver_account_id":2,"amount":25,"reference_id":"api-transfer-alice-bob-001"}' | jq
+curl -i http://localhost:3000/accounts/105/balance
 ```
 
-## Duplicate Reference ID Test
+Expected:
 
-The same `reference_id` should not be processed twice.
+```text
+401 Unauthorized
+```
+
+### Invalid token
 
 ```bash
-curl -s -X POST http://localhost:3000/transactions/deposit \
-  -H "Content-Type: application/json" \
-  -d '{"account_id":1,"amount":100,"reference_id":"api-deposit-alice-001"}' | jq
+curl -i \
+  -H "Authorization: Bearer not-a-jwt" \
+  http://localhost:3000/accounts/105/balance
 ```
 
-Expected response:
+Expected:
 
-```json
-{
-  "error": {
-    "message": "Transaction with this reference_id already exists"
-  }
-}
+```text
+401 Unauthorized
 ```
 
-## Insufficient Funds Test
+### Valid token, another user's account
 
 ```bash
-curl -s -X POST http://localhost:3000/transactions/withdraw \
-  -H "Content-Type: application/json" \
-  -d '{"account_id":1,"amount":999999,"reference_id":"api-withdraw-too-much-001"}' | jq
+curl -i \
+  -H "Authorization: Bearer $USER_ACCESS_TOKEN" \
+  http://localhost:3000/accounts/OTHER_ACCOUNT_ID/balance
 ```
 
-Expected response:
+Expected:
 
-```json
-{
-  "error": {
-    "message": "Insufficient funds"
-  }
-}
+```text
+403 Forbidden
 ```
 
-## Transfer to Same Account Test
+### Valid token, nonexistent account
 
 ```bash
-curl -s -X POST http://localhost:3000/transactions/transfer \
-  -H "Content-Type: application/json" \
-  -d '{"sender_account_id":1,"receiver_account_id":1,"amount":25,"reference_id":"api-transfer-same-account-001"}' | jq
+curl -i \
+  -H "Authorization: Bearer $USER_ACCESS_TOKEN" \
+  http://localhost:3000/accounts/999999/balance
 ```
 
-Expected response:
+Expected:
 
-```json
-{
-  "error": {
-    "message": "Cannot transfer to the same account"
-  }
-}
+```text
+404 Not Found
 ```
 
-## Missing Account Test
+### Valid owner token
 
 ```bash
-curl -s -X POST http://localhost:3000/transactions/transfer \
-  -H "Content-Type: application/json" \
-  -d '{"sender_account_id":1,"receiver_account_id":999,"amount":25,"reference_id":"api-transfer-missing-account-001"}' | jq
+curl -i \
+  -H "Authorization: Bearer $USER_ACCESS_TOKEN" \
+  http://localhost:3000/accounts/105/balance
 ```
 
-Expected response:
+Expected:
 
-```json
-{
-  "error": {
-    "message": "One or both accounts do not exist or are inactive"
-  }
-}
+```text
+200 OK
 ```
+
+## Financial Validation Tests
+
+The existing wallet implementation should also reject:
+
+- duplicate `reference_id` values
+- withdrawals above the available balance
+- transfers to the same account
+- operations involving missing or inactive accounts
+- zero or negative amounts

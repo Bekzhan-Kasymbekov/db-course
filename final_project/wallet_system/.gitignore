@@ -5,3 +5,8 @@ backups/*.backup
 backups/*.sql
 
 npm-debug.log*
+*.log
+
+coverage/
+dist/
+docs/*.mp4

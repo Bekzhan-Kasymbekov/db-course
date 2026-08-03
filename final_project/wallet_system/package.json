@@ -1,18 +1,24 @@
 {
-  "name": "wallet_system",
+  "name": "wallet-system",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "description": "Ledger-based Express and PostgreSQL wallet API secured with Keycloak OIDC, JWT validation, RBAC, and account ownership checks.",
+  "main": "src/server.js",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "check": "find src -name '*.js' -print0 | xargs -0 -n1 node --check"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "keycloak",
+    "openid-connect",
+    "jwt",
+    "express",
+    "postgresql",
+    "rbac",
+    "ledger"
+  ],
+  "author": "Bekzhan Kasymbekov",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",

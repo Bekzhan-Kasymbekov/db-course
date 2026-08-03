@@ -40,7 +40,7 @@ async function require_account_access(req, res, next) {
             return res.status(403).json({
                 error: {
                     message:
-                    'You do not have permission to acces this account',
+                    'You do not have permission to access this account',
                 },
             });
         }

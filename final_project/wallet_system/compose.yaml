@@ -3,13 +3,19 @@ services:
     image: quay.io/keycloak/keycloak:26.7.0
     container_name: wallet-keycloak
     command: start-dev
+
     environment:
+      # Development-only bootstrap credentials.
       KC_BOOTSTRAP_ADMIN_USERNAME: admin
       KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+    
     ports:
       - "127.0.0.1:8080:8080"
+
     volumes:
       - keycloak_data:/opt/keycloak/data
+
+    restart: unless-stopped
 
 volumes:
   keycloak_data:
